@@ -4,6 +4,7 @@ import { CTABanner } from "@/components/cta-banner";
 import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
 import { ServiceSection } from "@/components/service-section";
+import { WorkingProcess } from "@/components/working-process";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServiceSection />
       <CTABanner />
       <CaseStudy />
+      <WorkingProcess />
     </div>
   );
 }

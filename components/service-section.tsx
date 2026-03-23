@@ -87,15 +87,17 @@ export const ServiceSection = () => (
 interface ServiceCardProps {
     variant: 'primary' | 'accent' | 'secondary'
     children: React.ReactNode
+    className?: string
 }
 
 
-const ServiceCard = ({ variant, children }: ServiceCardProps) => (
+export const ServiceCard = ({ variant, children, className }: ServiceCardProps) => (
     <div className={cn(
         "flex justify-between rounded-[45px] border border-accent p-12.5 shadow-[0_5px_0_0_rgba(25,26,35,1)]",
         variant === 'primary' && "bg-primary",
         variant === 'accent' && "bg-accent",
-        variant === 'secondary' && "bg-secondary"
+        variant === 'secondary' && "bg-secondary",
+        className
     )}>
         {children}
     </div>
