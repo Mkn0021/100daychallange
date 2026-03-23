@@ -1,12 +1,14 @@
+import { Section } from "./section";
+
 export const BrandLogos = () => (
-    <div className="w-full flex items-center justify-between mix-blend-luminosity px-25">
+    <Section className="flex items-center justify-between mix-blend-luminosity">
         <AmazonLogo />
         <DribbbleLogo />
         <HubspotLogo />
         <NotionLogo />
         <NetflixLogo />
         <ZoomLogo />
-    </div>
+    </Section>
 )
 
 

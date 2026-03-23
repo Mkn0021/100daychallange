@@ -1,7 +1,8 @@
 import { Button } from "./button";
+import { Section } from "./section";
 
 export const HeroSection = () => (
-    <section className="w-full my-17.5 flex items-center justify-between px-25">
+    <Section className="flex items-center justify-between">
         <div className="max-w-132.5 text-6xl font-medium gap-8.75 flex flex-col items-start">
             <h1>Navigating the digital landscape for success</h1>
             <p className="text-[20px] leading-[1.4]">
@@ -12,7 +13,7 @@ export const HeroSection = () => (
             </Button>
         </div>
         <HeroImage />
-    </section>
+    </Section>
 )
 
 const HeroImage = () => (

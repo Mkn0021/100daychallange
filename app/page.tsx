@@ -1,6 +1,7 @@
 import { BrandLogos } from "@/components/brand-logos";
 import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
+import { ServiceSection } from "@/components/service-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <BrandLogos />
+      <ServiceSection />
     </div>
   );
 }
