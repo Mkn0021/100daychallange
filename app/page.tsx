@@ -1,3 +1,4 @@
+import { BrandLogos } from "@/components/brand-logos";
 import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="flex flex-col gap-2 items-center justify-center">
       <Navbar />
       <HeroSection />
+      <BrandLogos />
     </div>
   );
 }
