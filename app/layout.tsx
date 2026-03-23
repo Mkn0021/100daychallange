@@ -1,7 +1,7 @@
 import "./globals.css";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
-
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} h-full font-sans antialiased`}
+      className={cn("antialiased font-sans", spaceGrotesk.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

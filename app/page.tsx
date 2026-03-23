@@ -1,7 +1,10 @@
+import { Button } from "@/components/button";
+import { Navbar } from "@/components/navbar";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      Hello
+    <div className="flex flex-col gap-2 items-center justify-center">
+      <Navbar />
     </div>
   );
 }
