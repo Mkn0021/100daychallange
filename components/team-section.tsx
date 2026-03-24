@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { LinkedinIcon } from "./ui/icons";
+import { Avatar } from "./ui/illustration";
 import {
     Section,
     SectionCard,
@@ -105,55 +106,4 @@ const TeamCard = ({
         <div className="h-px w-full bg-accent" />
         <p className="text-[18px] text-left text-balance">{description}</p>
     </SectionCard>
-);
-
-const Avatar = ({ image }: { image?: string }) => (
-    <svg
-        width="106"
-        height="103"
-        viewBox="0 0 106 103"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-    >
-        <path
-            d="M91.631 53.9117C124.473 91.3213 94.1455 121.649 56.7359 88.8068C19.3263 121.649 -11.0016 91.3213 21.8408 53.9117C-11.0016 16.5021 19.3263 -13.8258 56.7359 19.0166C94.1455 -13.8258 124.473 16.5021 91.631 53.9117Z"
-            fill="#231F20"
-        />
-        <mask
-            id="mask0_341_350"
-            style={{ maskType: "alpha" }}
-            maskUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-            width="98"
-            height="98"
-        >
-            <path
-                d="M83.8068 48.9117C116.649 86.3213 86.3213 116.649 48.9117 83.8068C11.5021 116.649 -18.8258 86.3213 14.0166 48.9117C-18.8258 11.5021 11.5021 -18.8258 48.9117 14.0166C86.3213 -18.8258 116.649 11.5021 83.8068 48.9117Z"
-                fill="#231F20"
-            />
-        </mask>
-        <g mask="url(#mask0_341_350)">
-            {image && (
-                <image
-                    x="-2"
-                    y="-10"
-                    width="100"
-                    height="120"
-                    href={image}
-                    preserveAspectRatio="xMidYMid slice"
-                />
-            )}
-            <rect x="-2" y="-10" width="100" height="120" fill="url(#pattern0_341_350)" />
-            <rect
-                x="-2"
-                y="-10"
-                width="100"
-                height="120"
-                fill="#B9FF66"
-                style={{ mixBlendMode: "multiply" }}
-            />
-        </g>
-    </svg>
 );
