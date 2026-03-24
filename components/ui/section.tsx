@@ -40,8 +40,8 @@ export const SectionContent = ({ className, children }: SectionProps) => (
     </div>
 )
 
-export const SectionCard = ({ variant, children, className }: SectionProps & {
-    variant: 'primary' | 'accent' | 'secondary';
+export const SectionCard = ({ variant = 'primary', children, className }: SectionProps & {
+    variant?: 'primary' | 'accent' | 'secondary';
 }) => (
     <div className={cn(
         "flex justify-between rounded-[45px] border border-accent p-12.5 shadow-[0_5px_0_0_rgba(25,26,35,1)]",

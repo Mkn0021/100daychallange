@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Logo from "./ui/logo";
-import { Section, SectionContent, SectionHeader, SectionTitle } from "./ui/section";
-import { FacebookIcon, LinkedInIcon, TwitterIcon } from "./ui/icons";
-import { FormInput } from "./ui/form-input";
 import { Button } from "./ui/button";
+import { Section, SectionContent, SectionTitle } from "./ui/section";
+import { FacebookIcon, LinkedinIcon, TwitterIcon } from "./ui/icons";
 
 const FooterLinks = [
     {
@@ -42,7 +41,7 @@ export const Footer = () => (
                     ))}
                 </div>
                 <div className="flex gap-5 items-center">
-                    <LinkedInIcon />
+                    <LinkedinIcon />
                     <FacebookIcon />
                     <TwitterIcon />
                 </div>
@@ -62,7 +61,7 @@ export const Footer = () => (
                 </div>
             </div>
             <p className="py-12.5 border-t">
-                &copy; {new Date().getFullYear()} Positivus. All rights reserved. 
+                &copy; {new Date().getFullYear()} Positivus. All rights reserved.
                 <span className="ml-10 underline">Privacy Policy</span>
             </p>
         </SectionContent>
