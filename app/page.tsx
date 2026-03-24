@@ -11,19 +11,19 @@ import { Testimonial } from "@/components/testimonial";
 import { WorkingProcess } from "@/components/working-process";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col gap-2 items-center justify-center">
-      <Navbar />
-      <HeroSection />
-      <BrandLogos />
-      <ServiceSection />
-      <CTABanner />
-      <CaseStudy />
-      <WorkingProcess />
-      <TeamSection />
-      <Testimonial />
-      <ContactUs />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="flex flex-col gap-2 items-center justify-center">
+            <Navbar />
+            <HeroSection />
+            <BrandLogos />
+            <ServiceSection />
+            <CTABanner />
+            <CaseStudy />
+            <WorkingProcess />
+            <TeamSection />
+            <Testimonial />
+            <ContactUs />
+            <Footer />
+        </div>
+    );
 }

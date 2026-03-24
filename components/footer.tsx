@@ -7,26 +7,25 @@ import { FacebookIcon, LinkedinIcon, TwitterIcon } from "./ui/icons";
 const FooterLinks = [
     {
         title: "About us",
-        href: "#"
+        href: "#",
     },
     {
         title: "Services",
-        href: "#"
+        href: "#",
     },
     {
         title: "Case Studies",
-        href: "#"
+        href: "#",
     },
     {
         title: "Pricing",
-        href: "#"
+        href: "#",
     },
     {
         title: "Blog",
-        href: "#"
-    }
-]
-
+        href: "#",
+    },
+];
 
 export const Footer = () => (
     <Section as="footer">
@@ -35,7 +34,11 @@ export const Footer = () => (
                 <Logo />
                 <div className="flex gap-10 text-[18px] underline underline-offset-4 items-center">
                     {FooterLinks.map((link, index) => (
-                        <Link key={index} href={link.href} className="text-white hover:text-white/80 transition-colors duration-300">
+                        <Link
+                            key={index}
+                            href={link.href}
+                            className="text-white hover:text-white/80 transition-colors duration-300"
+                        >
                             {link.title}
                         </Link>
                     ))}
@@ -53,11 +56,19 @@ export const Footer = () => (
                     </SectionTitle>
                     <p>Email: info@positivus.com</p>
                     <p>Phone: +1 (123) 456-7890</p>
-                    <p>Address: 1234 Main St <br /> Moonstone City, Stardust State 12345</p>
+                    <p>
+                        Address: 1234 Main St <br /> Moonstone City, Stardust State 12345
+                    </p>
                 </div>
                 <div className="flex items-center justify-between gap-5 px-10 py-14.5 rounded-[14px] bg-[rgb(41,42,50)]">
-                    <input placeholder="Email" type="email" className="border border-white placeholder-white py-5.5 px-8.75 rounded-[14px]" />
-                    <Button variant="primary" type="submit" className="py-5 px-8.75">Subscribe</Button>
+                    <input
+                        placeholder="Email"
+                        type="email"
+                        className="border border-white placeholder-white py-5.5 px-8.75 rounded-[14px]"
+                    />
+                    <Button variant="primary" type="submit" className="py-5 px-8.75">
+                        Subscribe
+                    </Button>
                 </div>
             </div>
             <p className="py-12.5 border-t">
@@ -66,4 +77,4 @@ export const Footer = () => (
             </p>
         </SectionContent>
     </Section>
-)
+);

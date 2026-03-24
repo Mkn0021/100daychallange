@@ -20,36 +20,64 @@ export const CheckBox = ({
         />
         {label}
     </label>
-)
+);
 
-export const FormInput = ({ label, className, id, name, type = "text", ...props }: ComponentPropsWithoutRef<"input"> & {
+export const FormInput = ({
+    label,
+    className,
+    id,
+    name,
+    type = "text",
+    ...props
+}: ComponentPropsWithoutRef<"input"> & {
     label?: ReactNode;
     className?: string;
 }) => (
     <div className="flex flex-col gap-1.25">
-        {label ? <label htmlFor={id ?? name} className="text-[16px]">{label}</label> : null}
+        {label ? (
+            <label htmlFor={id ?? name} className="text-[16px]">
+                {label}
+            </label>
+        ) : null}
         <input
             {...props}
             id={id}
             name={name}
             type={type}
-            className={cn("border border-accent rounded-[14px] bg-white px-7.5 py-4.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black", className)}
+            className={cn(
+                "border border-accent rounded-[14px] bg-white px-7.5 py-4.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black",
+                className
+            )}
         />
     </div>
-)
+);
 
-export const TextArea = ({ label, className, id, name, rows = 3, ...props }: Omit<ComponentPropsWithoutRef<"textarea">, "children"> & {
+export const TextArea = ({
+    label,
+    className,
+    id,
+    name,
+    rows = 3,
+    ...props
+}: Omit<ComponentPropsWithoutRef<"textarea">, "children"> & {
     label?: ReactNode;
     className?: string;
 }) => (
     <div className="flex flex-col gap-1.25">
-        {label ? <label htmlFor={id ?? name} className="text-[16px]">{label}</label> : null}
+        {label ? (
+            <label htmlFor={id ?? name} className="text-[16px]">
+                {label}
+            </label>
+        ) : null}
         <textarea
             {...props}
             id={id}
             name={name}
             rows={rows}
-            className={cn("border border-accent rounded-[14px] bg-white px-7.5 py-4.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black", className)}
+            className={cn(
+                "border border-accent rounded-[14px] bg-white px-7.5 py-4.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black",
+                className
+            )}
         />
     </div>
-)
+);
