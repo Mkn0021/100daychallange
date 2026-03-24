@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
 import { ServiceSection } from "@/components/service-section";
 import { TeamSection } from "@/components/team-section";
+import { Testimonial } from "@/components/testimonial";
 import { WorkingProcess } from "@/components/working-process";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <CaseStudy />
       <WorkingProcess />
       <TeamSection />
+      <Testimonial />
       <ContactUs />
       <Footer />
     </div>
