@@ -1,6 +1,6 @@
 ![Positivus Landing Page](./public/Cover.png)
-# Positivus - Digital Marketing Agency Landing Page
 
+# Positivus - Digital Marketing Agency Landing Page
 
 **Keywords:** Digital Marketing, Marketing Agency, SEO, Social Media Marketing, Content Marketing, Web Design, Landing Page, Next.js, React
 
@@ -8,10 +8,10 @@
 
 Positivus is a modern landing page for a digital marketing agency. Built with Next.js, React, TypeScript, and Tailwind CSS. This project showcases a professional, responsive design with smooth animations and optimized performance.
 
-
 ## Design
 
 The design is available on Figma:
+
 - [Positivus Landing Page Design](https://www.figma.com/design/4WvNy3W0mlZ5nG4AkttL9F/Positivus-Landing-Page-Design--Community-?node-id=341-566&t=8ar0O5SVwY8ostHa-0)
 
 Design by the Figma Community. The design includes complete mockups, component specifications, and design system guidelines.
@@ -19,6 +19,7 @@ Design by the Figma Community. The design includes complete mockups, component s
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ or Bun
 - pnpm (recommended) or npm/yarn
 

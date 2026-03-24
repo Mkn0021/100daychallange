@@ -17,20 +17,20 @@ export const CaseStudy = () => (
                 Studies
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="py-17.5 px-15 gap-16 rounded-[45px] bg-accent flex items-stretch">
+        <SectionContent className="px-8 py-12 sm:py-17.5 sm:px-15 gap-16 rounded-[45px] bg-accent flex flex-col lg:flex-row items-stretch w-full">
             <Card>
                 For a local restaurant, we implemented a targeted PPC campaign that resulted in a
                 50% increase in website traffic and a 25% increase in sales.
             </Card>
 
-            <div className="w-px bg-secondary mx-8" />
+            <div className="h-px lg:h-auto lg:w-px bg-secondary lg:mx-8" />
 
             <Card>
                 For a B2B software company, we developed an SEO strategy that resulted in a first
                 page ranking for key keywords and a 200% increase in organic traffic.
             </Card>
 
-            <div className="w-px bg-secondary mx-8" />
+            <div className="h-px lg:h-auto lg:w-px bg-secondary lg:mx-8" />
 
             <Card>
                 For a national retail chain, we created a social media marketing campaign that
@@ -41,11 +41,11 @@ export const CaseStudy = () => (
 );
 
 const Card = ({ children }: { children: React.ReactNode }) => (
-    <div className="max-w-75 text-white text-[18px] flex flex-col items-start gap-5">
+    <div className="lg:max-w-75 text-white text-[16px] sm:text-[18px] flex flex-col items-start gap-5 w-full">
         <p>{children}</p>
         <Link
             href="#"
-            className="text-[20px] text-primary hover:text-primary/80 flex items-center gap-4"
+            className="sm:text-[20px] text-[18px] text-primary hover:text-primary/80 flex items-center gap-4"
         >
             Learn More
             <ArrowIcon />

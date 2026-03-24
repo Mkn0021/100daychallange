@@ -9,7 +9,7 @@ export const CheckBox = ({
     label: ReactNode;
     className?: string;
 }) => (
-    <label className="flex items-center gap-2 text-[18px]">
+    <label className="flex items-center gap-2 text-[16px]  sm:text-[18px]">
         <input
             type="radio"
             {...props}

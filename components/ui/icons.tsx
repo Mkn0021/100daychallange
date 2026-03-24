@@ -15,17 +15,35 @@ export const ArrowIcon = ({ className }: { className?: string }) => (
 );
 
 export const MinusIcon = () => (
-    <svg width="18" height="6" viewBox="0 0 18 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 18 6" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 5.64V0H17.76V5.64H0Z" fill="black" />
     </svg>
 );
 
 export const PlusIcon = () => (
-    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M9.6 25.08V15.36H0V9.72H9.6V0H15.48V9.72H25.08V15.36H15.48V25.08H9.6Z"
             fill="#191A23"
         />
+    </svg>
+);
+
+export const Hamburgericon = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M4 6l16 0" />
+        <path d="M4 12l16 0" />
+        <path d="M4 18l16 0" />
     </svg>
 );
 

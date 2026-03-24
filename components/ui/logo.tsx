@@ -1,12 +1,5 @@
 const Logo = ({ className }: { className?: string }) => (
-    <svg
-        width="220"
-        height="36"
-        viewBox="0 0 220 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={className}
-    >
+    <svg viewBox="0 0 220 36" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <g clipPath="url(#clip0_330_1194)">
             <path
                 d="M17.9986 5.53472L35.5997 0.349121L30.464 18.0001L35.5997 35.6012L17.9986 30.4655L0.347656 35.6012L5.53325 18.0001L0.347656 0.349121L17.9986 5.53472Z"

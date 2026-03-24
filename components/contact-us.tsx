@@ -17,7 +17,7 @@ export const ContactUs = () => (
                 Connect with Us: Let's Discuss Your <br /> Digital Marketing Needs
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="bg-secondary rounded-[45px] py-15 px-25 flex items-center justify-between gap-10 overflow-hidden">
+        <SectionContent className="bg-secondary rounded-[45px] px-8 py-12 sm:py-15 sm:px-25 flex items-center justify-between gap-10 overflow-hidden">
             <ContactForm />
             <ContactUsImage />
         </SectionContent>

@@ -19,32 +19,32 @@ interface Service {
 
 const Services: Service[] = [
     {
-        title: "Search engine_optimization",
+        title: "Search engine optimization",
         illustration: <Service1 />,
         variant: "secondary",
     },
     {
-        title: "Pay-per-click_advertising",
+        title: "Pay-per-click advertising",
         illustration: <Service2 />,
         variant: "primary",
     },
     {
-        title: "Social Media_Marketing",
+        title: "Social Media Marketing",
         illustration: <Service3 />,
         variant: "accent",
     },
     {
-        title: "Email_Marketing",
+        title: "Email Marketing",
         illustration: <Service4 />,
         variant: "secondary",
     },
     {
-        title: "Content_Creation",
+        title: "Content Creation",
         illustration: <Service5 />,
         variant: "primary",
     },
     {
-        title: "Analytics and_Tracking",
+        title: "Analytics and Tracking",
         illustration: <Service6 />,
         variant: "accent",
     },
@@ -60,22 +60,21 @@ export const ServiceSection = () => (
             </SectionSubTitle>
         </SectionHeader>
         <SectionContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 auto-rows-[310px]">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 auto-rows-[310px]">
                 {Services.map((service, index) => {
-                    const titleParts = service.title.split("_");
                     return (
-                        <SectionCard key={index} variant={service.variant}>
+                        <SectionCard key={index} variant={service.variant} className="relative">
                             <CardContent
                                 variant={service.variant}
                                 illustration={service.illustration}
                             >
-                                <CardHeader>
-                                    {titleParts.map((part, i) => (
-                                        <CardTitle key={i} variant={service.variant}>
-                                            {part}
-                                        </CardTitle>
-                                    ))}
-                                </CardHeader>
+                                <SectionTitle
+                                    variant={service.variant}
+                                    className="text-left text-[26px] sm:text-[30px] z-10"
+                                    as="h3"
+                                >
+                                    {service.title}
+                                </SectionTitle>
                             </CardContent>
                         </SectionCard>
                     );
@@ -91,19 +90,16 @@ interface CardProps {
     className?: string;
 }
 
-const CardHeader = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="flex flex-col items-start text-[30px] font-medium">{children}</h3>
-);
-
 const CardTitle = ({ variant, children }: CardProps) => (
-    <span
+    <SectionTitle
+        as="h3"
         className={cn(
-            "w-fit px-1.75 rounded-[7px]",
+            "text-left text-[26px] sm:text-[30px]",
             variant === "secondary" ? "bg-primary" : "bg-secondary"
         )}
     >
         {children}
-    </span>
+    </SectionTitle>
 );
 
 const CardContent = ({
@@ -114,12 +110,12 @@ const CardContent = ({
     illustration: React.ReactNode;
 }) => (
     <>
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between h-full">
             {children}
             <Link
                 href="#"
                 className={cn(
-                    "flex items-center gap-2 text-[20px] transition-colors duration-300",
+                    "flex items-center gap-2 sm:text-[20px] text-[18px] transition-colors duration-300",
                     variant === "accent"
                         ? "text-secondary hover:text-secondary/80"
                         : "text-accent hover:text-accent/80"
@@ -133,9 +129,11 @@ const CardContent = ({
                 >
                     <ArrowIcon className={variant === "accent" ? "text-accent" : "text-primary"} />
                 </div>
-                Learn More
+                <span className="hidden sm:block">Learn More</span>
             </Link>
         </div>
-        {illustration}
+        <div className="absolute sm:static sm:p-0 bottom-0 right-0 px-8 py-12 scale-75 sm:scale-100 origin-bottom-right h-full">
+            {illustration}
+        </div>
     </>
 );

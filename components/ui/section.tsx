@@ -13,21 +13,63 @@ export const Section = ({
     as?: "header" | "section" | "div" | "footer";
 }) => {
     const Component = as || "section";
-    return <Component className={cn("w-full mt-17.5 px-25", className)}>{children}</Component>;
+    return (
+        <Component className={cn("w-full mt-15 sm:mt-17.5 px-8 sm:px-25", className)}>
+            {children}
+        </Component>
+    );
 };
 
 export const SectionHeader = ({ className, children }: SectionProps) => (
-    <div className={cn("flex mt-17.5 mb-20 gap-10", className)}>{children}</div>
+    <div
+        className={cn(
+            "flex flex-col items-center lg:flex-row mt-15 sm:mt-17.5 mb-17.5 sm:mb-20 gap-10",
+            className
+        )}
+    >
+        {children}
+    </div>
 );
 
-export const SectionTitle = ({ className, children }: SectionProps) => (
-    <h2 className={cn("text-[40px] font-medium px-1.75 rounded-[7px] bg-primary", className)}>
-        {children}
-    </h2>
-);
+export const SectionTitle = ({
+    className,
+    children,
+    as,
+    variant = "secondary",
+}: SectionProps & {
+    as?: "h2" | "h3" | "h4";
+    variant?: "primary" | "accent" | "secondary";
+}) => {
+    const Component = as || "h2";
+    return (
+        <Component
+            className={cn(
+                "sm:text-[40px] text-[36px] text-center font-medium leading-snug",
+                className
+            )}
+        >
+            <span
+                className={cn(
+                    "px-1.5 rounded-[7px]",
+                    "[box-decoration-break:clone] [-webkit-box-decoration-break:clone]",
+                    variant === "secondary" ? "bg-primary" : "bg-secondary"
+                )}
+            >
+                {children}
+            </span>
+        </Component>
+    );
+};
 
 export const SectionSubTitle = ({ className, children }: SectionProps) => (
-    <p className={cn("text-[18px] text-black max-w-xl", className)}>{children}</p>
+    <p
+        className={cn(
+            "text-[16px] sm:text-[18px] text-black lg:text-left text-center max-w-xl",
+            className
+        )}
+    >
+        {children}
+    </p>
 );
 
 export const SectionContent = ({ className, children }: SectionProps) => (
@@ -43,7 +85,7 @@ export const SectionCard = ({
 }) => (
     <div
         className={cn(
-            "flex justify-between rounded-[45px] border border-accent p-12.5 shadow-[0_5px_0_0_rgba(25,26,35,1)]",
+            "flex justify-between rounded-[45px] border border-accent px-8 py-12 sm:p-12.5 shadow-[0_5px_0_0_rgba(25,26,35,1)]",
             variant === "primary" && "bg-primary",
             variant === "accent" && "bg-accent",
             variant === "secondary" && "bg-secondary",

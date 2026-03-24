@@ -1,11 +1,10 @@
 export const Service1 = () => (
     <svg
-        width="210"
-        height="170"
         viewBox="0 0 210 170"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="h-full w-auto"
     >
         <rect y="2" width="210" height="166.047" fill="url(#pattern0_336_1588)" />
         <defs>
@@ -33,12 +32,11 @@ export const Service1 = () => (
 
 export const Service2 = () => (
     <svg
-        width="210"
-        height="148"
         viewBox="0 0 210 148"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="h-full w-auto"
     >
         <rect width="210" height="147.624" fill="url(#pattern0_334_1445)" />
         <defs>
@@ -66,12 +64,11 @@ export const Service2 = () => (
 
 export const Service3 = () => (
     <svg
-        width="210"
-        height="210"
         viewBox="0 0 210 210"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="h-full w-auto"
     >
         <rect x="1" width="208.846" height="210" fill="url(#pattern0_336_1595)" />
         <defs>
@@ -99,12 +96,11 @@ export const Service3 = () => (
 
 export const Service4 = () => (
     <svg
-        width="210"
-        height="193"
         viewBox="0 0 210 193"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="h-full w-auto"
     >
         <rect
             width="210"
@@ -137,12 +133,11 @@ export const Service4 = () => (
 
 export const Service5 = () => (
     <svg
-        width="210"
-        height="196"
         viewBox="0 0 210 196"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="h-full w-auto"
     >
         <rect width="210" height="195.915" fill="url(#pattern0_336_1660)" />
         <defs>
@@ -170,12 +165,11 @@ export const Service5 = () => (
 
 export const Service6 = () => (
     <svg
-        width="210"
-        height="170"
         viewBox="0 0 210 170"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="h-full w-auto"
     >
         <rect width="210" height="170" fill="url(#pattern0_336_1576)" />
         <defs>
@@ -208,7 +202,7 @@ export const ContactUsImage = () => (
         viewBox="0 0 692 649"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="-mr-106"
+        className="-mr-106 hidden lg:block"
     >
         <mask
             id="mask0_341_618"
@@ -260,6 +254,7 @@ export const CTAImage = () => (
         viewBox="0 0 494 395"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="hidden sm:block"
     >
         <path
             d="M169 163.5C215.644 163.5 257.858 167.471 288.398 173.887C303.673 177.095 316 180.91 324.497 185.13C328.746 187.24 332.011 189.439 334.208 191.694C336.403 193.948 337.5 196.222 337.5 198.5C337.5 200.778 336.403 203.052 334.208 205.306C332.011 207.561 328.746 209.76 324.497 211.87C316 216.09 303.673 219.905 288.398 223.113C257.858 229.529 215.644 233.5 169 233.5C122.356 233.5 80.1417 229.529 49.6016 223.113C34.3275 219.905 21.9997 216.09 13.5029 211.87C9.25392 209.76 5.98872 207.561 3.79199 205.306C1.59696 203.052 0.5 200.778 0.5 198.5C0.5 196.222 1.59696 193.948 3.79199 191.694C5.98872 189.439 9.25392 187.24 13.5029 185.13C21.9997 180.91 34.3275 177.095 49.6016 173.887C80.1417 167.471 122.356 163.5 169 163.5Z"
@@ -291,14 +286,8 @@ export const CTAImage = () => (
     </svg>
 );
 
-export const HeroImage = () => (
-    <svg
-        width="601"
-        height="515"
-        viewBox="0 0 601 515"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
+export const HeroImage = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 601 515" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <g clipPath="url(#clip0_332_1228)">
             <path
                 d="M310.999 432.535L328.6 427.349L323.464 445L328.6 462.601L310.999 457.465L293.348 462.601L298.533 445L293.348 427.349L310.999 432.535Z"

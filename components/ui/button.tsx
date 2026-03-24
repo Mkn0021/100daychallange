@@ -14,7 +14,7 @@ export const Button = ({
         <button
             {...props}
             className={cn(
-                "rounded-[14px] text-[20px] py-3 px-5 transition-colors duration-300",
+                "rounded-[14px] sm:text-[20px] text-[18px] py-3 px-5 transition-colors duration-300",
                 variant === "primary" && "bg-primary hover:bg-primary/80 text-black",
                 variant === "secondary" && "bg-accent hover:bg-accent/80 text-white",
                 variant === "outline" && "border border-accent hover:border-accent/80 text-accent",

@@ -64,7 +64,7 @@ export const TeamSection = () => (
                 strategies
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <SectionContent className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {teamMembers.map((member) => (
                 <TeamCard
                     key={member.name}
@@ -99,11 +99,11 @@ const TeamCard = ({
         <div className="flex gap-5">
             <Avatar image={image} />
             <p className="text-left mt-auto">
-                <strong className="block text-[20px] font-medium">{name}</strong>
-                <span className="text-[18px]">{role}</span>
+                <strong className="block sm:text-[20px] text-[18px] font-medium">{name}</strong>
+                <span className="text-[16px]  sm:text-[18px]">{role}</span>
             </p>
         </div>
         <div className="h-px w-full bg-accent" />
-        <p className="text-[18px] text-left text-balance">{description}</p>
+        <p className="text-[16px]  sm:text-[18px] text-left text-balance">{description}</p>
     </SectionCard>
 );

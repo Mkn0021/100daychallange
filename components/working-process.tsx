@@ -62,16 +62,18 @@ export const WorkingProcess = () => {
                     <SectionCard
                         key={step.id}
                         variant={index === 0 ? "primary" : "secondary"}
-                        className="py-10 px-15 flex flex-col items-center gap-7.5 justify-between w-full cursor-pointer"
+                        className="sm:py-10 sm:px-15 flex flex-col items-center gap-7.5 justify-between w-full cursor-pointer"
                     >
                         <div className="w-full flex items-center text-center justify-between">
-                            <h3 className="text-[60px] font-medium flex items-center">
+                            <h3 className="text-[36px] sm:text-[60px] font-medium flex items-center">
                                 {step.number}.{" "}
-                                <span className="text-[30px] ml-6">{step.title}</span>
+                                <span className="text-[24px] text-left sm:text-[30px] ml-2 sm:ml-6">
+                                    {step.title}
+                                </span>
                             </h3>
                             <button
                                 onClick={() => toggleExpand(step.id)}
-                                className="rounded-full border-2 border-accent size-15 bg-secondary flex items-center justify-center hover:bg-white transition-colors"
+                                className="rounded-full border-2 border-accent size-10 shrink-0 sm:size-15 bg-secondary flex items-center justify-center hover:bg-white transition-colors p-2"
                                 aria-label={expandedId === step.id ? "Collapse" : "Expand"}
                             >
                                 {expandedId === step.id ? <MinusIcon /> : <PlusIcon />}
@@ -80,7 +82,9 @@ export const WorkingProcess = () => {
                         {expandedId === step.id && (
                             <>
                                 <div className="h-px w-full bg-accent" />
-                                <div className="text-[18px] w-full">{step.description}</div>
+                                <p className="text-[16px]  sm:text-[18px] w-full">
+                                    {step.description}
+                                </p>
                             </>
                         )}
                     </SectionCard>

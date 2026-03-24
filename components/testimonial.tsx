@@ -26,7 +26,7 @@ export const Testimonial = () => (
                     business. We highly recommend Positivus to any company looking to grow their
                     online presence.
                 </Bubble>
-                <p className="text-[20px] text-white text-left mt-10">
+                <p className="sm:text-[20px] text-[18px] text-white text-left mt-10">
                     <strong className="block text-primary">John Smith</strong>
                     Marketing Director at XYZ Corp
                 </p>
@@ -39,7 +39,7 @@ export const Testimonial = () => (
                     business. We highly recommend Positivus to any company looking to grow their
                     online presence.
                 </Bubble>
-                <p className="text-[20px] text-white text-left mt-10">
+                <p className="sm:text-[20px] text-[18px] text-white text-left mt-10">
                     <strong className="block text-primary">John Smith</strong>
                     Marketing Director at XYZ Corp
                 </p>
@@ -52,7 +52,7 @@ export const Testimonial = () => (
                     business. We highly recommend Positivus to any company looking to grow their
                     online presence.
                 </Bubble>
-                <p className="text-[20px] text-white text-left mt-10">
+                <p className="sm:text-[20px] text-[18px] text-white text-left mt-10">
                     <strong className="block text-primary">John Smith</strong>
                     Marketing Director at XYZ Corp
                 </p>
