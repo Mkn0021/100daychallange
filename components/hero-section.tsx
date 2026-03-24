@@ -1,5 +1,5 @@
-import { Button } from "./button";
-import { Section } from "./section";
+import { Button } from "./ui/button";
+import { Section } from "./ui/section";
 
 export const HeroSection = () => (
     <Section className="flex items-center justify-between">

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Section, SectionContent, SectionHeader, SectionSubTitle, SectionTitle } from "./section";
-import { ArrowIcon } from "./service-section";
+import { ArrowIcon } from "./ui/icons";
+import { Section, SectionContent, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
 
 export const CaseStudy = () => (
     <Section>

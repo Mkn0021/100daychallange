@@ -1,5 +1,5 @@
-import Logo from "./logo";
-import { Button } from "./button";
+import Logo from "./ui/logo";
+import { Button } from "./ui/button";
 
 export const Navbar = () => (
     <nav className="w-full mt-10 flex items-center justify-between py-2.5 px-25">

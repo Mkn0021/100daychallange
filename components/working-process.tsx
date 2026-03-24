@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ServiceCard } from "./service-section";
-import { Section, SectionContent, SectionHeader, SectionSubTitle, SectionTitle } from "./section";
+import { Section, SectionCard, SectionContent, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
+import { MinusIcon, PlusIcon } from "./ui/icons";
 
 const PROCESS_STEPS = [
     {
@@ -48,10 +48,10 @@ export const WorkingProcess = () => {
             </SectionHeader>
             <SectionContent className="flex flex-col gap-15">
                 {PROCESS_STEPS.map((step, index) => (
-                    <ServiceCard 
+                    <SectionCard
                         key={step.id}
-                        variant={index === 0 ? "primary" : "secondary"} 
-                 
+                        variant={index === 0 ? "primary" : "secondary"}
+
                         className="py-10 px-15 flex flex-col items-center gap-7.5 justify-between w-full cursor-pointer"
                     >
                         <div className="w-full flex items-center text-center justify-between">
@@ -74,21 +74,9 @@ export const WorkingProcess = () => {
                                 </div>
                             </>
                         )}
-                    </ServiceCard>
+                    </SectionCard>
                 ))}
             </SectionContent>
         </Section>
     );
 }
-
-const MinusIcon = () => (
-    <svg width="18" height="6" viewBox="0 0 18 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 5.64V0H17.76V5.64H0Z" fill="black" />
-    </svg>
-)
-
-const PlusIcon = () => (
-    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.6 25.08V15.36H0V9.72H9.6V0H15.48V9.72H25.08V15.36H15.48V25.08H9.6Z" fill="#191A23" />
-    </svg>
-)

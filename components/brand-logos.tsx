@@ -1,4 +1,4 @@
-import { Section } from "./section";
+import { Section } from "./ui/section";
 
 export const BrandLogos = () => (
     <Section className="flex items-center justify-between mix-blend-luminosity">

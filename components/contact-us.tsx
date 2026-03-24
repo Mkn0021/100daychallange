@@ -1,6 +1,6 @@
-import { Button } from "./button";
-import { CheckBox, FormInput, TextArea } from "./form-input";
-import { Section, SectionContent, SectionHeader, SectionSubTitle, SectionTitle } from "./section";
+import { Button } from "./ui/button";
+import { CheckBox, FormInput, TextArea } from "./ui/form-input";
+import { Section, SectionContent, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
 
 export const ContactUs = () => (
     <Section>
