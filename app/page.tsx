@@ -1,5 +1,6 @@
 import { BrandLogos } from "@/components/brand-logos";
 import { CaseStudy } from "@/components/case-study";
+import { ContactUs } from "@/components/contact-us";
 import { CTABanner } from "@/components/cta-banner";
 import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
@@ -16,6 +17,7 @@ export default function Home() {
       <CTABanner />
       <CaseStudy />
       <WorkingProcess />
+      <ContactUs />
     </div>
   );
 }
