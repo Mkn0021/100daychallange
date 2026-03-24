@@ -5,14 +5,19 @@ interface SectionProps {
     children: React.ReactNode;
 }
 
-export const Section = ({ className, children }: SectionProps) => (
-    <section className={cn("w-full mt-17.5 px-25", className)}>
-        {children}
-    </section>
-);
+export const Section = ({ className, children, as }: SectionProps & {
+    as?: "header" | "section" | "div" | "footer";
+}) => {
+    const Component = as || "section";
+    return (
+        <Component className={cn("w-full mt-17.5 px-25", className)}>
+            {children}
+        </Component>
+    );
+};
 
 export const SectionHeader = ({ className, children }: SectionProps) => (
-    <div className={cn("flex mt-17.5 gap-10", className)}>
+    <div className={cn("flex mt-17.5 mb-20 gap-10", className)}>
         {children}
     </div>
 )
@@ -30,7 +35,7 @@ export const SectionSubTitle = ({ className, children }: SectionProps) => (
 )
 
 export const SectionContent = ({ className, children }: SectionProps) => (
-    <div className={cn("mt-20", className)}>
+    <div className={className}>
         {children}
     </div>
 )
