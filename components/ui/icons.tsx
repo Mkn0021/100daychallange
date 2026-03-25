@@ -29,6 +29,36 @@ export const PlusIcon = () => (
     </svg>
 );
 
+export const ArrowLeftIcon = ({
+    className,
+    onClick,
+}: {
+    className?: string;
+    onClick?: () => void;
+}) => (
+    <svg
+        className={className}
+        viewBox="0 0 23 23"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        onClick={onClick}
+    >
+        <path
+            d="M1.5 9.546a1.5 1.5 0 0 0 0 3zm21.06 2.56a1.5 1.5 0 0 0 0-2.12L13.016.438a1.5 1.5 0 1 0-2.122 2.122l8.486 8.485-8.486 8.485a1.5 1.5 0 1 0 2.122 2.122zm-21.06.44h20v-3h-20z"
+            fill="#fff"
+        />
+    </svg>
+);
+
+export const DotIcon = ({ className }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M7.01 2.06 14 0l-2.04 7.01L14 14l-6.99-2.04L0 14l2.06-6.99L0 0z"
+            fill="currentColor"
+        />
+    </svg>
+);
+
 export const Hamburgericon = ({ className }: { className?: string }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
