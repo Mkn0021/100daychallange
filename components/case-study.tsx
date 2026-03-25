@@ -17,20 +17,20 @@ export const CaseStudy = () => (
                 Studies
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="px-8 py-12 sm:py-17.5 sm:px-15 gap-16 rounded-[45px] bg-accent flex flex-col xl:flex-row items-stretch w-full">
+        <SectionContent className="bg-accent flex w-full flex-col items-stretch gap-16 rounded-[45px] px-8 py-12 sm:px-15 sm:py-17.5 xl:flex-row">
             <Card>
                 For a local restaurant, we implemented a targeted PPC campaign that resulted in a
                 50% increase in website traffic and a 25% increase in sales.
             </Card>
 
-            <div className="h-px xl:h-auto xl:w-px bg-secondary xl:mx-8" />
+            <div className="bg-secondary h-px xl:mx-8 xl:h-auto xl:w-px" />
 
             <Card>
                 For a B2B software company, we developed an SEO strategy that resulted in a first
                 page ranking for key keywords and a 200% increase in organic traffic.
             </Card>
 
-            <div className="h-px xl:h-auto xl:w-px bg-secondary xl:mx-8" />
+            <div className="bg-secondary h-px xl:mx-8 xl:h-auto xl:w-px" />
 
             <Card>
                 For a national retail chain, we created a social media marketing campaign that
@@ -41,11 +41,11 @@ export const CaseStudy = () => (
 );
 
 const Card = ({ children }: { children: React.ReactNode }) => (
-    <div className="xl:max-w-75 text-white text-[16px] sm:text-[18px] flex flex-col items-start gap-5 w-full">
+    <div className="flex w-full flex-col items-start gap-5 text-[16px] text-white sm:text-[18px] xl:max-w-75">
         <p>{children}</p>
         <Link
             href="#"
-            className="sm:text-[20px] text-[18px] text-primary hover:text-primary/80 flex items-center gap-4"
+            className="text-primary hover:text-primary/80 flex items-center gap-4 text-[18px] sm:text-[20px]"
         >
             Learn More
             <ArrowIcon />

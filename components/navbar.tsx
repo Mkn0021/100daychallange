@@ -11,20 +11,20 @@ const NavLinks = [
 ];
 
 export const Navbar = () => (
-    <nav className="w-full mt-10 gap-10 flex items-center justify-between py-2.5 px-8 sm:px-25">
+    <nav className="mt-10 flex w-full items-center justify-between gap-10 px-8 py-2.5 sm:px-25">
         <Logo className="h-4.5 sm:h-6.5" />
-        <div className="hidden lg:flex items-center gap-4 sm:text-[20px] text-[18px]">
+        <div className="hidden items-center gap-4 text-[18px] sm:text-[20px] lg:flex">
             {NavLinks.map((link) => (
                 <Link
                     key={link.name}
                     href={link.href}
-                    className="text-black hover:text-gray-700 transition-colors duration-300"
+                    className="text-black transition-colors duration-300 hover:text-gray-700"
                 >
                     {link.name}
                 </Link>
             ))}
             <Button variant="outline">Request a quote</Button>
         </div>
-        <Hamburgericon className="lg:hidden h-6.5" />
+        <Hamburgericon className="h-6.5 lg:hidden" />
     </nav>
 );

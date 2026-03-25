@@ -62,18 +62,18 @@ export const WorkingProcess = () => {
                     <SectionCard
                         key={step.id}
                         variant={index === 0 ? "primary" : "secondary"}
-                        className="sm:py-10 sm:px-15 flex flex-col items-center gap-7.5 justify-between w-full cursor-pointer"
+                        className="flex w-full cursor-pointer flex-col items-center justify-between gap-7.5 sm:px-15 sm:py-10"
                     >
-                        <div className="w-full flex items-center text-center justify-between">
-                            <h3 className="text-[28px] xs:text-[36px] sm:text-[60px] font-medium flex items-center">
+                        <div className="flex w-full items-center justify-between text-center">
+                            <h3 className="xs:text-[36px] flex items-center text-[28px] font-medium sm:text-[60px]">
                                 {step.number}.{" "}
-                                <span className="text-[18px] xs:text-[24px] text-left sm:text-[30px] ml-2 sm:ml-6">
+                                <span className="xs:text-[24px] ml-2 text-left text-[18px] sm:ml-6 sm:text-[30px]">
                                     {step.title}
                                 </span>
                             </h3>
                             <button
                                 onClick={() => toggleExpand(step.id)}
-                                className="rounded-full border-2 border-accent size-10 shrink-0 sm:size-15 bg-secondary flex items-center justify-center hover:bg-white transition-colors p-2"
+                                className="border-accent bg-secondary flex size-10 shrink-0 items-center justify-center rounded-full border-2 p-2 transition-colors hover:bg-white sm:size-15"
                                 aria-label={expandedId === step.id ? "Collapse" : "Expand"}
                             >
                                 {expandedId === step.id ? <MinusIcon /> : <PlusIcon />}
@@ -81,8 +81,8 @@ export const WorkingProcess = () => {
                         </div>
                         {expandedId === step.id && (
                             <>
-                                <div className="h-px w-full bg-accent" />
-                                <p className="text-[12px] xs:text-[16px] sm:text-[18px] w-full">
+                                <div className="bg-accent h-px w-full" />
+                                <p className="xs:text-[16px] w-full text-[12px] sm:text-[18px]">
                                     {step.description}
                                 </p>
                             </>

@@ -14,7 +14,7 @@ export const Section = ({
 }) => {
     const Component = as || "section";
     return (
-        <Component className={cn("w-full mt-15 sm:mt-17.5 px-8 sm:px-25", className)}>
+        <Component className={cn("mt-15 w-full px-8 sm:mt-17.5 sm:px-25", className)}>
             {children}
         </Component>
     );
@@ -23,7 +23,7 @@ export const Section = ({
 export const SectionHeader = ({ className, children }: SectionProps) => (
     <div
         className={cn(
-            "flex flex-col items-center lg:flex-row mt-15 sm:mt-17.5 mb-17.5 sm:mb-20 gap-10",
+            "mt-15 mb-17.5 flex flex-col items-center gap-10 sm:mt-17.5 sm:mb-20 lg:flex-row",
             className
         )}
     >
@@ -44,13 +44,13 @@ export const SectionTitle = ({
     return (
         <Component
             className={cn(
-                "sm:text-[40px] text-[36px] text-center font-medium leading-snug",
+                "text-center text-[36px] leading-snug font-medium sm:text-[40px]",
                 className
             )}
         >
             <span
                 className={cn(
-                    "px-1.5 rounded-[7px]",
+                    "rounded-[7px] px-1.5",
                     "[box-decoration-break:clone] [-webkit-box-decoration-break:clone]",
                     variant === "secondary" ? "bg-primary" : "bg-secondary"
                 )}
@@ -64,7 +64,7 @@ export const SectionTitle = ({
 export const SectionSubTitle = ({ className, children }: SectionProps) => (
     <p
         className={cn(
-            "text-[16px] sm:text-[18px] text-black lg:text-left text-center max-w-md",
+            "max-w-md text-center text-[16px] text-black sm:text-[18px] lg:text-left",
             className
         )}
     >
@@ -85,7 +85,7 @@ export const SectionCard = ({
 }) => (
     <div
         className={cn(
-            "flex justify-between rounded-[45px] border border-accent px-8 py-12 sm:p-12.5 shadow-[0_5px_0_0_rgba(25,26,35,1)]",
+            "border-accent flex justify-between rounded-[45px] border px-8 py-12 shadow-[0_5px_0_0_rgba(25,26,35,1)] sm:p-12.5",
             variant === "primary" && "bg-primary",
             variant === "accent" && "bg-accent",
             variant === "secondary" && "bg-secondary",

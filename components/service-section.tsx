@@ -60,7 +60,7 @@ export const ServiceSection = () => (
             </SectionSubTitle>
         </SectionHeader>
         <SectionContent>
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 auto-rows-[310px]">
+            <div className="grid auto-rows-[310px] grid-cols-1 gap-10 xl:grid-cols-2">
                 {Services.map((service, index) => {
                     return (
                         <SectionCard key={index} variant={service.variant} className="relative">
@@ -70,7 +70,7 @@ export const ServiceSection = () => (
                             >
                                 <SectionTitle
                                     variant={service.variant}
-                                    className="text-left text-[26px] sm:text-[30px] z-10"
+                                    className="z-10 text-left text-[26px] sm:text-[30px]"
                                     as="h3"
                                 >
                                     {service.title}
@@ -110,12 +110,12 @@ const CardContent = ({
     illustration: React.ReactNode;
 }) => (
     <>
-        <div className="flex flex-col justify-between h-full">
+        <div className="flex h-full flex-col justify-between">
             {children}
             <Link
                 href="#"
                 className={cn(
-                    "flex items-center gap-2 sm:text-[20px] text-[18px] transition-colors duration-300",
+                    "flex items-center gap-2 text-[18px] transition-colors duration-300 sm:text-[20px]",
                     variant === "accent"
                         ? "text-secondary hover:text-secondary/80"
                         : "text-accent hover:text-accent/80"
@@ -132,7 +132,7 @@ const CardContent = ({
                 <span className="hidden sm:block">Learn More</span>
             </Link>
         </div>
-        <div className="absolute sm:static sm:p-0 bottom-0 right-0 px-8 py-12 scale-75 sm:scale-100 origin-bottom-right h-full">
+        <div className="absolute right-0 bottom-0 h-full origin-bottom-right scale-75 px-8 py-12 sm:static sm:scale-100 sm:p-0">
             {illustration}
         </div>
     </>

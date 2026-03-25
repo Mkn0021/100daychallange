@@ -42,8 +42,8 @@ export const Testimonial = () => {
                     Digital Marketing Services
                 </SectionSubTitle>
             </SectionHeader>
-            <SectionContent className="bg-accent rounded-[45px] px-8 py-12 sm:px-0 sm:py-21 flex flex-col items-center gap-10 overflow-hidden">
-                <div className="w-full flex items-start gap-10 overflow-hidden">
+            <SectionContent className="bg-accent flex flex-col items-center gap-10 overflow-hidden rounded-[45px] px-8 py-12 sm:px-0 sm:py-21">
+                <div className="flex w-full items-start gap-10 overflow-hidden">
                     <TestimonialCard
                         name={testimonials[(active - 1 + total) % total].name}
                         role={testimonials[(active - 1 + total) % total].role}
@@ -85,22 +85,22 @@ const TestimonialCard = ({
 }) => (
     <div
         className={cn(
-            "w-full flex flex-col justify-between h-95 sm:-translate-x-[calc(50%+2.5rem)] sm:w-[50%] shrink-0",
+            "flex h-95 w-full shrink-0 flex-col justify-between sm:w-[50%] sm:-translate-x-[calc(50%+2.5rem)]",
             className
         )}
     >
         <p
             className={cn(
-                "relative text-white text-center text-sm leading-relaxed p-4 sm:p-10 border border-primary rounded-[45px] flex-1 flex items-center justify-center",
-                "before:content-[''] before:absolute before:bottom-0 before:left-1/4 before:-translate-x-1/2 before:translate-y-full before:border-24 before:border-transparent before:border-t-primary",
-                "after:content-[''] after:absolute after:bottom-0 after:left-1/4 after:-translate-x-1/2 after:translate-y-full after:border-23 after:border-transparent after:border-t-accent"
+                "border-primary relative flex flex-1 items-center justify-center rounded-[45px] border p-4 text-center text-sm leading-relaxed text-white sm:p-10",
+                "before:border-t-primary before:absolute before:bottom-0 before:left-1/4 before:-translate-x-1/2 before:translate-y-full before:border-24 before:border-transparent before:content-['']",
+                "after:border-t-accent after:absolute after:bottom-0 after:left-1/4 after:-translate-x-1/2 after:translate-y-full after:border-23 after:border-transparent after:content-['']"
             )}
         >
             {children}
         </p>
         <div className="mt-10 text-center">
-            <strong className="block text-primary sm:text-[20px] text-[18px]">{name}</strong>
-            <span className="text-white sm:text-[20px] text-[18px]">{role}</span>
+            <strong className="text-primary block text-[18px] sm:text-[20px]">{name}</strong>
+            <span className="text-[18px] text-white sm:text-[20px]">{role}</span>
         </div>
     </div>
 );
@@ -118,8 +118,8 @@ export const Carosel = ({
     const next = () => setAction((i) => (i + 1) % total);
 
     return (
-        <div className="flex items-center justify-between gap-4 lg:mt-20 w-full sm:w-[50%]">
-            <ArrowLeftIcon onClick={prev} className="rotate-180 h-3.5" />
+        <div className="flex w-full items-center justify-between gap-4 sm:w-[50%] lg:mt-20">
+            <ArrowLeftIcon onClick={prev} className="h-3.5 rotate-180" />
 
             <div className="flex items-center gap-5">
                 {testimonials.map((_, i) => (

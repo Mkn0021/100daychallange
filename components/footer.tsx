@@ -29,29 +29,29 @@ const FooterLinks = [
 
 export const Footer = () => (
     <Section as="footer" className="px-0! xl:px-25!">
-        <SectionContent className="bg-accent xl:rounded-t-[45px] pt-13.75 px-8 sm:px-15 text-white">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6.75">
+        <SectionContent className="bg-accent px-8 pt-13.75 text-white sm:px-15 xl:rounded-t-[45px]">
+            <div className="flex flex-col items-center justify-between gap-6.75 lg:flex-row">
                 <Logo className="h-6.5" />
-                <div className="flex flex-col sm:flex-row gap-6.75 md:gap-10 text-[16px]  sm:text-[18px] underline underline-offset-4 items-center">
+                <div className="flex flex-col items-center gap-6.75 text-[16px] underline underline-offset-4 sm:flex-row sm:text-[18px] md:gap-10">
                     {FooterLinks.map((link, index) => (
                         <Link
                             key={index}
                             href={link.href}
-                            className="text-white hover:text-white/80 transition-colors duration-300"
+                            className="text-white transition-colors duration-300 hover:text-white/80"
                         >
                             {link.title}
                         </Link>
                     ))}
                 </div>
-                <div className="hidden md:flex gap-5 items-center">
+                <div className="hidden items-center gap-5 md:flex">
                     <LinkedinIcon />
                     <FacebookIcon />
                     <TwitterIcon />
                 </div>
             </div>
-            <div className="flex flex-col lg:flex-row items-center justify-between py-12.5 lg:mt-11.5 gap-10">
-                <div className="flex flex-col gap-6.75 text-[16px]  sm:text-[18px] items-center lg:items-start">
-                    <SectionTitle className="sm:text-[20px] text-[18px] text-accent w-fit">
+            <div className="flex flex-col items-center justify-between gap-10 py-12.5 lg:mt-11.5 lg:flex-row">
+                <div className="flex flex-col items-center gap-6.75 text-[16px] sm:text-[18px] lg:items-start">
+                    <SectionTitle className="text-accent w-fit text-[18px] sm:text-[20px]">
                         Contact us:
                     </SectionTitle>
                     <p>Email: info@positivus.com</p>
@@ -60,27 +60,27 @@ export const Footer = () => (
                         Address: 1234 Main St <br /> Moonstone City, Stardust State 12345
                     </p>
                 </div>
-                <div className="flex flex-col lg:flex-row  w-full lg:w-auto items-center justify-between gap-5 px-8 py-12 sm:px-10 sm:py-14.5 rounded-[14px] bg-[rgb(41,42,50)]">
+                <div className="flex w-full flex-col items-center justify-between gap-5 rounded-[14px] bg-[rgb(41,42,50)] px-8 py-12 sm:px-10 sm:py-14.5 lg:w-auto lg:flex-row">
                     <input
                         placeholder="Email"
                         type="email"
-                        className="border border-white placeholder-white py-4 px-5 w-full lg:w-auto lg:py-5.5 lg:px-8.75 rounded-[14px]"
+                        className="w-full rounded-[14px] border border-white px-5 py-4 placeholder-white lg:w-auto lg:px-8.75 lg:py-5.5"
                     />
                     <Button
                         variant="primary"
                         type="submit"
-                        className="lg:py-5 lg:px-8.75 w-full lg:w-auto"
+                        className="w-full lg:w-auto lg:px-8.75 lg:py-5"
                     >
                         Subscribe
                     </Button>
                 </div>
-                <div className="md:hidden flex gap-5 items-center">
+                <div className="flex items-center gap-5 md:hidden">
                     <LinkedinIcon />
                     <FacebookIcon />
                     <TwitterIcon />
                 </div>
             </div>
-            <p className="flex flex-col md:flex-row gap-2 md:gap-10 py-12.5 border-t w-full items-center">
+            <p className="flex w-full flex-col items-center gap-2 border-t py-12.5 md:flex-row md:gap-10">
                 &copy; {new Date().getFullYear()} Positivus. All rights reserved.
                 <span className="underline">Privacy Policy</span>
             </p>

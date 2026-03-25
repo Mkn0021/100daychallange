@@ -12,7 +12,7 @@ import { WorkingProcess } from "@/components/working-process";
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-2 items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-2">
             <Navbar />
             <HeroSection />
             <BrandLogos />

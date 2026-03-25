@@ -17,7 +17,7 @@ export const ContactUs = () => (
                 Connect with Us: Let's Discuss Your Digital Marketing Needs
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="bg-secondary rounded-[45px] px-8 py-12 sm:py-15 sm:px-25 flex items-center justify-between gap-10 overflow-hidden">
+        <SectionContent className="bg-secondary flex items-center justify-between gap-10 overflow-hidden rounded-[45px] px-8 py-12 sm:px-25 sm:py-15">
             <ContactForm />
             <ContactUsImage />
         </SectionContent>
@@ -25,7 +25,7 @@ export const ContactUs = () => (
 );
 
 const ContactForm = () => (
-    <form className="w-full lg:w-130 flex flex-col justify-between gap-10">
+    <form className="flex w-full flex-col justify-between gap-10 lg:w-130">
         <div className="flex items-center gap-8.75">
             <CheckBox name="inquiryType" value="say-hi" defaultChecked label="Say Hi" />
             <CheckBox name="inquiryType" value="quote" label="Get a Quote" />

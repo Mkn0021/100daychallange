@@ -64,7 +64,7 @@ export const TeamSection = () => (
                 strategies
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
+        <SectionContent className="grid grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
             {teamMembers.map((member) => (
                 <TeamCard
                     key={member.name}
@@ -90,7 +90,7 @@ const TeamCard = ({
     image: string;
     description: string;
 }) => (
-    <SectionCard className="relative bg-transparent py-10 px-8.75 flex flex-col items-left text-center gap-7">
+    <SectionCard className="items-left relative flex flex-col gap-7 bg-transparent px-8.75 py-10 text-center">
         <LinkedinIcon
             className="absolute top-10 right-8.75"
             iconColor="var(--color-primary)"
@@ -98,12 +98,12 @@ const TeamCard = ({
         />
         <div className="flex gap-5">
             <Avatar image={image} />
-            <p className="text-left mt-auto">
-                <strong className="block sm:text-[20px] text-[18px] font-medium">{name}</strong>
-                <span className="text-[16px]  sm:text-[18px]">{role}</span>
+            <p className="mt-auto text-left">
+                <strong className="block text-[18px] font-medium sm:text-[20px]">{name}</strong>
+                <span className="text-[16px] sm:text-[18px]">{role}</span>
             </p>
         </div>
-        <div className="h-px w-full bg-accent" />
-        <p className="text-[16px]  sm:text-[18px] text-left text-balance">{description}</p>
+        <div className="bg-accent h-px w-full" />
+        <p className="text-left text-[16px] text-balance sm:text-[18px]">{description}</p>
     </SectionCard>
 );
