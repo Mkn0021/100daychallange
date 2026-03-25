@@ -54,7 +54,7 @@ export const ServiceSection = () => (
     <Section>
         <SectionHeader>
             <SectionTitle>Services</SectionTitle>
-            <SectionSubTitle>
+            <SectionSubTitle className="max-w-xl">
                 At our digital marketing agency, we offer a range of services to help businesses
                 grow and succeed online. These services include:
             </SectionSubTitle>

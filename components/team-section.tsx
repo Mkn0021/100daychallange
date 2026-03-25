@@ -64,7 +64,7 @@ export const TeamSection = () => (
                 strategies
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <SectionContent className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
             {teamMembers.map((member) => (
                 <TeamCard
                     key={member.name}

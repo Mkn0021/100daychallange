@@ -11,7 +11,7 @@ export const CTABanner = () => (
                 Contact us today to learn more about how our digital marketing services can help
                 your business grow and succeed online.
             </p>
-            <Button className="py-4 px-8 w-full sm:w-auto">Get your free proposal</Button>
+            <Button className="py-4 px-8">Get your free proposal</Button>
         </div>
         <CTAImage />
     </Section>

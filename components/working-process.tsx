@@ -54,7 +54,7 @@ export const WorkingProcess = () => {
             <SectionHeader>
                 <SectionTitle>Our Working Process</SectionTitle>
                 <SectionSubTitle>
-                    Step-by-Step Guide to Achieving <br /> Your Business Goals
+                    Step-by-Step Guide to Achieving Your Business Goals
                 </SectionSubTitle>
             </SectionHeader>
             <SectionContent className="flex flex-col gap-15">
@@ -65,9 +65,9 @@ export const WorkingProcess = () => {
                         className="sm:py-10 sm:px-15 flex flex-col items-center gap-7.5 justify-between w-full cursor-pointer"
                     >
                         <div className="w-full flex items-center text-center justify-between">
-                            <h3 className="text-[36px] sm:text-[60px] font-medium flex items-center">
+                            <h3 className="text-[28px] xs:text-[36px] sm:text-[60px] font-medium flex items-center">
                                 {step.number}.{" "}
-                                <span className="text-[24px] text-left sm:text-[30px] ml-2 sm:ml-6">
+                                <span className="text-[18px] xs:text-[24px] text-left sm:text-[30px] ml-2 sm:ml-6">
                                     {step.title}
                                 </span>
                             </h3>
@@ -82,7 +82,7 @@ export const WorkingProcess = () => {
                         {expandedId === step.id && (
                             <>
                                 <div className="h-px w-full bg-accent" />
-                                <p className="text-[16px]  sm:text-[18px] w-full">
+                                <p className="text-[12px] xs:text-[16px] sm:text-[18px] w-full">
                                     {step.description}
                                 </p>
                             </>

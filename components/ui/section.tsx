@@ -64,7 +64,7 @@ export const SectionTitle = ({
 export const SectionSubTitle = ({ className, children }: SectionProps) => (
     <p
         className={cn(
-            "text-[16px] sm:text-[18px] text-black lg:text-left text-center max-w-xl",
+            "text-[16px] sm:text-[18px] text-black lg:text-left text-center max-w-md",
             className
         )}
     >

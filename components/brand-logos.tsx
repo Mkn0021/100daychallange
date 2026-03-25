@@ -18,7 +18,7 @@ const AmazonLogo = () => (
         viewBox="0 0 125 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-24 md:w-32 h-auto"
+        className="w-24 xl:w-32 h-auto"
     >
         <g>
             <path
@@ -80,7 +80,7 @@ const DribbbleLogo = () => (
         viewBox="0 0 127 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-24 md:w-32 h-auto"
+        className="w-24 xl:w-32 h-auto"
     >
         <g clipPath="url(#clip0_333_1359)">
             <path
@@ -105,7 +105,7 @@ const HubspotLogo = () => (
         viewBox="0 0 129 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-24 md:w-32 h-auto"
+        className="w-24 xl:w-32 h-auto"
     >
         <g clipPath="url(#clip0_333_1360)">
             <path
@@ -152,7 +152,7 @@ const NotionLogo = () => (
         viewBox="0 0 146 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-24 md:w-32 h-auto"
+        className="w-24 xl:w-32 h-auto"
     >
         <g clipPath="url(#clip0_333_1361)">
             <path
@@ -181,7 +181,7 @@ const NetflixLogo = () => (
         viewBox="0 0 126 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-24 md:w-32 h-auto"
+        className="w-24 xl:w-32 h-auto"
     >
         <g clipPath="url(#clip0_333_1362)">
             <path
@@ -204,7 +204,7 @@ const ZoomLogo = () => (
         viewBox="0 0 111 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-24 md:w-32 h-auto"
+        className="w-24 xl:w-32 h-auto"
     >
         <g clipPath="url(#clip0_333_1363)">
             <path

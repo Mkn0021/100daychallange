@@ -28,10 +28,10 @@ const FooterLinks = [
 ];
 
 export const Footer = () => (
-    <Section as="footer" className="px-0! lg:px-25!">
-        <SectionContent className="bg-accent lg:rounded-t-[45px] pt-13.75 px-8 sm:px-15 text-white">
+    <Section as="footer" className="px-0! xl:px-25!">
+        <SectionContent className="bg-accent xl:rounded-t-[45px] pt-13.75 px-8 sm:px-15 text-white">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6.75">
-                <Logo />
+                <Logo className="h-6.5" />
                 <div className="flex flex-col sm:flex-row gap-6.75 md:gap-10 text-[16px]  sm:text-[18px] underline underline-offset-4 items-center">
                     {FooterLinks.map((link, index) => (
                         <Link
