@@ -13,15 +13,15 @@ import { Testimonial } from "@/components/day-01/testimonial";
 import { ContactUs } from "@/components/day-01/contact-us";
 import { Footer } from "@/components/day-01/footer";
 
-const font = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
+const font = Space_Grotesk({ subsets: ["latin"] });
 
 export default function Day01() {
     return (
         <div
             className={cn(
                 styles.root,
-                font.variable,
-                "flex flex-col items-center justify-center gap-2 font-sans"
+                font.className,
+                "flex flex-col items-center justify-center gap-2"
             )}
         >
             <Navbar />

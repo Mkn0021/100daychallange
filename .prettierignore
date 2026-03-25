@@ -8,3 +8,5 @@ build
 .idea
 pnpm-lock.yaml
 package-lock.json
+app/day-01
+components/day-01
