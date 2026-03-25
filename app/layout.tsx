@@ -1,26 +1,14 @@
 import "./globals.css";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
-
-const spaceGrotesk = Space_Grotesk({
-    variable: "--font-space-grotesk",
-    subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
-    title: "Positivus - Digital Marketing Agency | SEO, Social Media & Content Marketing",
-    description:
-        "Boost your online presence with Positivus, a leading digital marketing agency. Expert SEO, social media marketing, and content strategies for business growth.",
+    title: "100 Days of UI",
+    description: "100 days of UI projects",
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={cn("font-sans antialiased", spaceGrotesk.variable)}>
+        <html lang="en">
             <body>{children}</body>
         </html>
     );
