@@ -6,6 +6,7 @@ import { WhySection } from "@/components/day-02/why-section";
 import { ReviewSection } from "@/components/day-02/review-section";
 import { PricingSection } from "@/components/day-02/pricing-section";
 import { CTABanner } from "@/components/day-02/cta-banner";
+import { FeatureSection } from "@/components/day-02/feature-section";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function Day02() {
             )}
         >
             <WhySection />
+            <FeatureSection />
             <ReviewSection />
             <CTABanner />
             <PricingSection />
