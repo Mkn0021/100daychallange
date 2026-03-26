@@ -45,9 +45,7 @@ export const SectionTitle = ({
 };
 
 export const SectionSubTitle = ({ className, children }: SectionProps) => (
-    <p className={cn("max-w-lg text-center text-[18px] font-light sm:text-[20px]", className)}>
-        {children}
-    </p>
+    <p className={cn("text-center text-[18px] font-light sm:text-[20px]", className)}>{children}</p>
 );
 
 export const SectionContent = ({ className, children }: SectionProps) => (
