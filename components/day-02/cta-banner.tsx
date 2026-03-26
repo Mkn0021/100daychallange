@@ -4,19 +4,21 @@ import { Section, SectionCard } from "./ui/section";
 
 export const CTABanner = () => (
     <Section>
-        <SectionCard className="flex flex-col items-start justify-between bg-(--blue) p-20">
-            <Logo className="h-21.5" />
-            <div className="mt-25 flex items-center justify-between gap-20">
-                <h2 className="text-left text-[85px] leading-tight">
+        <SectionCard className="flex flex-col items-start justify-between bg-(--blue) sm:p-20">
+            <Logo className="h-14 sm:h-20" />
+            <div className="mt-5 flex flex-col items-center justify-between gap-6 sm:mt-15 sm:flex-row sm:gap-20 xl:mt-25">
+                <h2 className="text-left text-[44px] leading-tight sm:text-[60px] xl:text-[85px]">
                     Ready to build better habits?
                 </h2>
-                <div className="flex max-w-[50%] flex-col items-end justify-end gap-15">
-                    <p className="text-right text-[20px] leading-relaxed font-light">
+                <div className="flex flex-col gap-10 sm:max-w-[50%] sm:items-end sm:justify-end sm:gap-15">
+                    <p className="text-[16px] leading-relaxed font-light sm:text-right xl:text-[20px]">
                         Take control of your daily routines, stay consistent with the goals that
                         matter, and build meaningful progress — one habit at a time. With Habitus,
                         you’re just a step away from creating a better version of yourself.
                     </p>
-                    <Button variant="primary">Start Tracking – It’s Free</Button>
+                    <Button variant="primary" className="px-2 sm:px-10">
+                        Start Tracking – It’s Free
+                    </Button>
                 </div>
             </div>
         </SectionCard>

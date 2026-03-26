@@ -35,7 +35,7 @@ export const SectionTitle = ({
     return (
         <Component
             className={cn(
-                "text-center text-[48px] leading-tight font-bold tracking-tight sm:text-[60px]",
+                "text-center text-[44px] leading-tight font-bold tracking-tight sm:text-[60px]",
                 className
             )}
         >
@@ -53,5 +53,7 @@ export const SectionContent = ({ className, children }: SectionProps) => (
 );
 
 export const SectionCard = ({ className, children }: SectionProps) => (
-    <div className={cn("bg-secondary rounded-[40px] p-12.5", className)}>{children}</div>
+    <div className={cn("bg-secondary rounded-[40px] px-8 py-10 xl:p-12.5", className)}>
+        {children}
+    </div>
 );

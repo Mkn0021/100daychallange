@@ -35,7 +35,7 @@ export const FeatureSection = () => (
                 Real stories from people who turned their goals into habits.
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-1 gap-10 md:grid-cols-4">
+        <SectionContent className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
             {Features.map((feature, index) => (
                 <Featurecard key={index} color={feature.color} image={feature.image} />
             ))}

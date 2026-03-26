@@ -75,12 +75,12 @@ const PricingCard = ({
 }: PricingCardProps) => (
     <SectionCard
         className={cn(
-            "relative flex flex-col items-start justify-between p-17.5",
+            "relative flex flex-col items-start justify-between px-10 py-12 sm:p-17.5",
             variant === "primary" && "bg-accent text-white"
         )}
     >
         {variant === "primary" && badge && (
-            <div className="pointer-events-none absolute top-0 right-0 p-17.5">
+            <div className="pointer-events-none absolute top-0 right-0 px-10 py-12 sm:p-17.5">
                 <Button variant="primary" className="px-3 py-1.25 text-[14px] font-normal">
                     {badge}
                 </Button>
