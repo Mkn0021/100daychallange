@@ -1,4 +1,13 @@
-import { BellIcon, ProgressIcon, StreakIcon } from "./ui/icons";
+import Image from "next/image";
+import {
+    BellIcon,
+    BranchIcon,
+    GoogleIcon,
+    ProgressIcon,
+    SpotifyIcon,
+    StreakIcon,
+    TreeHouseIcon,
+} from "./ui/icons";
 import {
     Section,
     SectionCard,
@@ -28,7 +37,7 @@ const Features = [
 ];
 
 export const WhySection = () => (
-    <Section>
+    <Section className="overflow-hidden">
         <SectionHeader className="flex-row justify-between">
             <SectionTitle>Why you’ll love it</SectionTitle>
             <SectionSubTitle>Designed to help you stay on track, effortlessly.</SectionSubTitle>
@@ -42,5 +51,30 @@ export const WhySection = () => (
                 </SectionCard>
             ))}
         </SectionContent>
+        <div className="mt-10 flex justify-between gap-15">
+            <SectionCard className="relative aspect-60/56 flex-1 overflow-hidden bg-(--blue)">
+                <div className="absolute top-0 left-0 mx-35 mt-17.5 w-fit overflow-hidden rounded-[20px] border-7 bg-white">
+                    <Image
+                        src="/day-02/review-2.png"
+                        alt="App Preview"
+                        width={200}
+                        height={400}
+                        loading="lazy"
+                        className="w-full object-cover"
+                    />
+                </div>
+            </SectionCard>
+            <div className="relative flex-1 py-6.25">
+                <h3 className="text-[36px] leading-snug font-medium">
+                    Join thousands of users from top companies using Habitus to build better habits
+                </h3>
+                <div className="bg-secondary absolute bottom-0 left-0 flex h-10 w-[calc(100%+9rem)] items-center gap-11 rounded-[40px] px-11 py-14.5">
+                    <GoogleIcon />
+                    <SpotifyIcon />
+                    <TreeHouseIcon />
+                    <BranchIcon />
+                </div>
+            </div>
+        </div>
     </Section>
 );
