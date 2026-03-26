@@ -16,6 +16,7 @@ import {
     SectionSubTitle,
     SectionTitle,
 } from "./ui/section";
+import { MobilePreview } from "./ui/mobile";
 
 const Features = [
     {
@@ -53,16 +54,15 @@ export const WhySection = () => (
         </SectionContent>
         <div className="mt-10 flex justify-between gap-15">
             <SectionCard className="relative aspect-60/56 flex-1 overflow-hidden bg-(--blue)">
-                <div className="absolute top-0 left-0 mx-35 mt-17.5 w-fit overflow-hidden rounded-[20px] border-7 bg-white">
+                <MobilePreview className="absolute top-0 left-0 mx-35 mt-17.5">
                     <Image
                         src="/day-02/review-2.png"
                         alt="App Preview"
                         width={200}
                         height={400}
                         loading="lazy"
-                        className="w-full object-cover"
                     />
-                </div>
+                </MobilePreview>
             </SectionCard>
             <div className="relative flex-1 py-6.25">
                 <h3 className="text-[36px] leading-snug font-medium">
