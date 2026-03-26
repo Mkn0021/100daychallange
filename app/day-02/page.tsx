@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { WhySection } from "@/components/day-02/why-section";
 import { ReviewSection } from "@/components/day-02/review-section";
 import { PricingSection } from "@/components/day-02/pricing-section";
+import { CTABanner } from "@/components/day-02/cta-banner";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function Day02() {
         >
             <WhySection />
             <ReviewSection />
+            <CTABanner />
             <PricingSection />
         </div>
     );

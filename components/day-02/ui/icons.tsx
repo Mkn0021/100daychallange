@@ -46,3 +46,13 @@ export const UnlockIcon = () => (
         />
     </svg>
 );
+
+export const Logo = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 76 86" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path
+            d="M74.25 42.8683L-3.74766e-06 85.7365L0 -3.24557e-06L74.25 42.8683Z"
+            fill="currentColor"
+        />
+        <path d="M1.25 42.8683L75.5 85.7365L75.5 -3.24557e-06L1.25 42.8683Z" fill="currentColor" />
+    </svg>
+);
