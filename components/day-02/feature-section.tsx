@@ -7,6 +7,7 @@ import {
     SectionTitle,
 } from "./ui/section";
 import Image from "next/image";
+import { MobilePreview } from "./ui/mobile";
 
 const Features = [
     {
@@ -35,7 +36,7 @@ export const FeatureSection = () => (
                 Real stories from people who turned their goals into habits.
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
+        <SectionContent className="grid grid-cols-1 gap-15 md:grid-cols-2 xl:grid-cols-4">
             {Features.map((feature, index) => (
                 <Featurecard key={index} color={feature.color} image={feature.image} />
             ))}
@@ -47,15 +48,9 @@ const Featurecard = ({ color, image }: { color: string; image: string }) => (
     <div className="relative aspect-280/486 w-full">
         <FeatureCardShape className={cn("pointer-events-none absolute inset-0", color)} />
 
-        <div className="absolute inset-x-13.75 bottom-13.75 z-10 h-[calc(100%-120px)] min-h-75 overflow-hidden rounded-[20px] border-4 bg-white">
-            <Image
-                src={image}
-                alt="Feature Image"
-                width={400}
-                height={300}
-                className="h-full w-full rounded-[20px] object-cover"
-            />
-        </div>
+        <MobilePreview className="absolute inset-x-0 bottom-[5%] z-10 mx-auto w-[80%] sm:bottom-[10%] sm:w-[70%]">
+            <Image src={image} alt="Feature Image" width={400} height={300} />
+        </MobilePreview>
     </div>
 );
 

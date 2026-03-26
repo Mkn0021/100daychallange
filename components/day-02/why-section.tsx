@@ -62,7 +62,7 @@ export const WhySection = () => (
 
             <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
                 <SectionCard className="relative aspect-60/56 min-w-[50%] overflow-hidden bg-(--blue)">
-                    <MobilePreview className="absolute top-[15%] left-0 w-[50%] translate-x-1/2">
+                    <MobilePreview className="absolute inset-x-0 top-[15%] mx-auto w-[80%] sm:w-[60%]">
                         <Image
                             src="/day-02/review-2.png"
                             alt="App Preview"
