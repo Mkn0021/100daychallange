@@ -12,8 +12,15 @@ import { TeamSection } from "@/components/day-01/team-section";
 import { Testimonial } from "@/components/day-01/testimonial";
 import { ContactUs } from "@/components/day-01/contact-us";
 import { Footer } from "@/components/day-01/footer";
+import type { Metadata } from "next";
 
 const font = Space_Grotesk({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+    title: "Day 01 - Positivus | 100 Days of UI",
+    description:
+        "A digital marketing agency landing page design. Explore design patterns, components, and frontend best practices.",
+};
 
 export default function Day01() {
     return (

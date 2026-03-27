@@ -10,8 +10,15 @@ import { FeatureSection } from "@/components/day-02/feature-section";
 import { HeroSection } from "@/components/day-02/hero-section";
 import { Footer } from "@/components/day-02/footer";
 import { FAQ } from "@/components/day-02/faq";
+import type { Metadata } from "next";
 
 const font = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+    title: "Day 02 - Habitus | 100 Days of UI",
+    description:
+        "A habit tracking app landing page. Discover modern UI patterns, interactive components, and responsive design practices.",
+};
 
 export default function Day02() {
     return (

@@ -9,6 +9,13 @@ const days = [
         href: "/day-01",
         cover: "/day-01.png",
     },
+    {
+        day: "02",
+        title: "Habitus",
+        description: "Habit Tracking App",
+        href: "/day-02",
+        cover: "/day-02/day-02.png",
+    },
 ];
 
 export default function Home() {
