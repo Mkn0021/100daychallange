@@ -16,7 +16,7 @@ export const PricingSection = () => (
             <SectionTitle>Simple, transparent pricing</SectionTitle>
             <SectionSubTitle>Start free. Upgrade when you're ready.</SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <SectionContent className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <PricingCard
                 variant="secondary"
                 title="Free Plan"

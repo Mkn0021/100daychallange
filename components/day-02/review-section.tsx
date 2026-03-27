@@ -37,7 +37,7 @@ export const ReviewSection = () => (
                 Real stories from people who turned their goals into habits.
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <SectionContent className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
             {Reviews.map((review, index) => (
                 <SectionCard
                     className="flex flex-col items-start justify-between gap-7.5 text-(--grey)"

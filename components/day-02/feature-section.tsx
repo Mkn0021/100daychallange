@@ -30,11 +30,9 @@ const Features = [
 
 export const FeatureSection = () => (
     <Section>
-        <SectionHeader className="items-start text-left">
-            <SectionTitle>What our users say</SectionTitle>
-            <SectionSubTitle>
-                Real stories from people who turned their goals into habits.
-            </SectionSubTitle>
+        <SectionHeader>
+            <SectionTitle>Take a Look Inside</SectionTitle>
+            <SectionSubTitle>A simple, beautiful interface built for everyday use.</SectionSubTitle>
         </SectionHeader>
         <SectionContent className="grid grid-cols-1 gap-15 md:grid-cols-2 xl:grid-cols-4">
             {Features.map((feature, index) => (

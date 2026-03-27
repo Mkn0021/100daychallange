@@ -9,6 +9,7 @@ import { CTABanner } from "@/components/day-02/cta-banner";
 import { FeatureSection } from "@/components/day-02/feature-section";
 import { HeroSection } from "@/components/day-02/hero-section";
 import { Footer } from "@/components/day-02/footer";
+import { FAQ } from "@/components/day-02/faq";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function Day02() {
             <ReviewSection />
             <CTABanner />
             <PricingSection />
+            <FAQ />
             <Footer />
         </div>
     );
