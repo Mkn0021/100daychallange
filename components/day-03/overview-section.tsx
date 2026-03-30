@@ -55,11 +55,11 @@ const OverviewCard = ({
     </SectionCard>
 );
 
-const CardTitle = ({ children }: { children: React.ReactNode }) => (
+export const CardTitle = ({ children }: { children: React.ReactNode }) => (
     <h3 className="text-[40px] font-bold">{children}</h3>
 );
 
-const CardSubtitle = ({
+export const CardSubtitle = ({
     children,
     className,
 }: {
