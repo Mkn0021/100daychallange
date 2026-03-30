@@ -27,7 +27,7 @@ export const Button = ({
             data-variant={variant}
         >
             {children}
-            {link && <LinkArrow />}
+            {link && <LinkArrow className="h-4.25" />}
         </button>
     );
 };

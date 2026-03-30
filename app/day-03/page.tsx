@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Syne } from "next/font/google";
 import { HeroSection } from "@/components/day-03/hero-section";
 import { BrandsSection } from "@/components/day-03/brands-section";
+import { OverviewSection } from "@/components/day-03/overview-section";
 
 const font = Syne({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Day02() {
             <Navbar />
             <HeroSection />
             <BrandsSection />
+            <OverviewSection />
         </div>
     );
 }
