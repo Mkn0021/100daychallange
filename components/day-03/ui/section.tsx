@@ -10,7 +10,7 @@ export const Section = ({
     children,
     as,
 }: SectionProps & {
-    as?: "header" | "section" | "div" | "footer";
+    as?: "header" | "section" | "div" | "footer" | "nav";
 }) => {
     const Component = as || "section";
     return (
@@ -35,7 +35,7 @@ export const SectionTitle = ({
     return (
         <Component
             className={cn(
-                "text-left text-[60px] leading-tight font-bold tracking-tight sm:text-[100px]",
+                "text-left text-[60px] leading-none font-bold tracking-tight sm:text-[100px]",
                 className
             )}
         >
