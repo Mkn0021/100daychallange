@@ -56,7 +56,7 @@ export const WhyAttend = () => (
                     variant="accent"
                     className="flex h-72.5 flex-col justify-between overflow-hidden py-10"
                 >
-                    <h3 className="text-[20px] font-bold">{feature.title}</h3>
+                    <h3 className="text-[20px] font-bold uppercase">{feature.title}</h3>
                     <div className={cn("flex justify-between", feature.className)}>
                         <p className="bg-[linear-gradient(184.55deg,#0147FF_35.34%,rgba(1,71,255,0)_79.91%)] bg-clip-text text-[300px] leading-90 text-transparent">
                             {feature.number}
