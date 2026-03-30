@@ -36,7 +36,7 @@ export const Agenda = () => (
             </SectionSubTitle>
         </SectionHeader>
         <SectionCard
-            className="relative mt-22.5 flex flex-col gap-37.5 overflow-hidden"
+            className="relative mt-22.5 flex flex-col gap-37.5 overflow-hidden px-22.5 py-37.5"
             variant="accent"
         >
             {EVENT_DAYS.map((day) => (

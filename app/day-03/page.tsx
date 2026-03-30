@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/day-03/hero-section";
 import { BrandsSection } from "@/components/day-03/brands-section";
 import { OverviewSection } from "@/components/day-03/overview-section";
 import { Agenda } from "@/components/day-03/agenda";
+import { SpeakerList } from "@/components/day-03/speakers-list";
 
 const font = Syne({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function Day02() {
             <BrandsSection />
             <OverviewSection />
             <Agenda />
+            <SpeakerList />
         </div>
     );
 }

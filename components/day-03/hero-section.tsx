@@ -3,7 +3,7 @@ import { Section, SectionCard, SectionContent, SectionTitle } from "./ui/section
 
 export const HeroSection = () => (
     <Section className="mt-15 sm:mt-15">
-        <SectionCard variant="accent" className="relative">
+        <SectionCard variant="accent" className="relative py-22.5">
             <div className="flex justify-between text-[22px] font-bold">
                 <p>OCTOBER 15-17, 2052</p>
                 <p>Horizon Convention Center, TechCity, Utopolis</p>
