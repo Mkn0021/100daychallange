@@ -11,6 +11,7 @@ import { SpeakerList } from "@/components/day-03/speakers-list";
 import { WhyAttend } from "@/components/day-03/why-attend";
 import { CTABanner } from "@/components/day-03/cta-banner";
 import { ContactSection } from "@/components/day-03/contact-section";
+import { Footer } from "@/components/day-03/footer";
 
 const font = Syne({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function Day02() {
             <WhyAttend />
             <CTABanner />
             <ContactSection />
+            <Footer />
         </div>
     );
 }

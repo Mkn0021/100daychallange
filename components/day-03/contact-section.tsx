@@ -94,7 +94,7 @@ const Input = ({
 );
 
 // TODO: handle separately
-const SocialIcons = () => (
+export const SocialIcons = () => (
     <svg
         width="147"
         height="22"
