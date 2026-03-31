@@ -38,7 +38,7 @@ export const CTABanner = () => (
             </SectionSubTitle>
         </SectionHeader>
         <SectionCard className="relative mt-15 overflow-hidden p-12 xl:p-24" variant="accent">
-            <h4 className="text-[1.12rem] md:text-xl">Early Bird Pricing Ends In:</h4>
+            <p className="text-[1.12rem] md:text-xl">Early Bird Pricing Ends In:</p>
             <TimerDisplay time="12:05:30" />
             <CTAIllustration className="absolute -right-50 -bottom-5 h-120 md:right-0 md:h-60 lg:bottom-0 lg:h-80" />
         </SectionCard>

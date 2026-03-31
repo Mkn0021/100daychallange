@@ -103,9 +103,7 @@ const PricingCard = ({
             <h4 className="flex items-end gap-1 text-4xl font-bold">
                 {price}
                 {variant === "primary" && period && (
-                    <span className="mb-2 text-base font-normal text-(--dark-grey)">
-                        {period}
-                    </span>
+                    <span className="mb-2 text-base font-normal text-(--dark-grey)">{period}</span>
                 )}
             </h4>
             <div className="mt-6 flex flex-col gap-4">

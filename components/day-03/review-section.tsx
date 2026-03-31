@@ -52,9 +52,9 @@ export const ReviewSection = () => (
                     variant={review.variant}
                     className="flex h-full flex-col justify-between"
                 >
-                    <h4 className="text-2xl font-bold break-keep md:text-[1.88rem]">
+                    <h3 className="text-2xl font-bold break-keep md:text-[1.88rem]">
                         {review.title}
-                    </h4>
+                    </h3>
 
                     <CardSubtitle className="mt-6 text-sm md:text-base">
                         &ldquo;{review.quote}&rdquo;

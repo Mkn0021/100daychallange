@@ -70,7 +70,7 @@ const LeftColumn = () => (
                 ))}
             </div>
         </div>
-        <p className="mt-19.25 text-xl text-[#7E7E7E]">
+        <p className="text-grey-300 mt-19.25 text-xl">
             &copy; 2052 Next-Gen AI Summit. All rights reserved.
         </p>
     </div>

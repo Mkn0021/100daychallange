@@ -30,15 +30,17 @@ export default function Day03() {
             className={cn(styles.root, font.className, "flex flex-col items-center justify-center")}
         >
             <Navbar />
-            <HeroSection />
-            <BrandsSection />
-            <OverviewSection />
-            <Agenda />
-            <SpeakerList />
-            <WhyAttend />
-            <ReviewSection />
-            <CTABanner />
-            <ContactSection />
+            <main>
+                <HeroSection />
+                <BrandsSection />
+                <OverviewSection />
+                <Agenda />
+                <SpeakerList />
+                <WhyAttend />
+                <ReviewSection />
+                <CTABanner />
+                <ContactSection />
+            </main>
             <Footer />
         </div>
     );
