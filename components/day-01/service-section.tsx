@@ -70,7 +70,7 @@ export const ServiceSection = () => (
                             >
                                 <SectionTitle
                                     variant={service.variant}
-                                    className="z-10 text-left text-[26px] sm:text-[30px]"
+                                    className="z-10 text-left text-[1.62rem] sm:text-[1.88rem]"
                                     as="h3"
                                 >
                                     {service.title}
@@ -103,7 +103,7 @@ const CardContent = ({
             <Link
                 href="#"
                 className={cn(
-                    "flex items-center gap-2 text-[18px] transition-colors duration-300 sm:text-[20px]",
+                    "flex items-center gap-2 text-[1.12rem] transition-colors duration-300 sm:text-xl",
                     variant === "accent"
                         ? "text-secondary hover:text-secondary/80"
                         : "text-accent hover:text-accent/80"

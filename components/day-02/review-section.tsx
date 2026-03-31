@@ -52,11 +52,11 @@ export const ReviewSection = () => (
                             className="size-10 rounded-full"
                         />
                         <div>
-                            <h3 className="text-accent text-[16px] font-bold">{review.name}</h3>
-                            <p className="text-[16px]">{review.role}</p>
+                            <h3 className="text-accent text-base font-bold">{review.name}</h3>
+                            <p className="text-base">{review.role}</p>
                         </div>
                     </div>
-                    <p className="text-[16px] text-balance">{review.review}</p>
+                    <p className="text-base text-balance">{review.review}</p>
                 </SectionCard>
             ))}
         </SectionContent>

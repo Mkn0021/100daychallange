@@ -11,10 +11,10 @@ export const ContactSection = () => (
             className="grid grid-cols-1 gap-21.25 rounded-[20px] px-2 py-12 md:rounded-[50px] md:py-22.5 xl:grid-cols-2"
         >
             <div className="px-4 md:px-10.5">
-                <h2 className="text-[36px] font-bold md:text-[50px]">
+                <h2 className="text-4xl font-bold md:text-[3.12rem]">
                     We’re here to connect and assist you
                 </h2>
-                <CardSubtitle className="mt-7.5 text-[16px] md:text-[20px]">
+                <CardSubtitle className="mt-7.5 text-base md:text-xl">
                     Have questions about the summit? Need help with registration or travel? Our team
                     is ready to assist you.
                 </CardSubtitle>
@@ -79,7 +79,7 @@ const Card = ({
 );
 
 const CardTitle = ({ className, children }: { className?: string; children: React.ReactNode }) => (
-    <h3 className={cn("text-[26px] font-bold text-nowrap uppercase", className)}>{children}</h3>
+    <h3 className={cn("text-[1.62rem] font-bold text-nowrap uppercase", className)}>{children}</h3>
 );
 
 const Input = ({

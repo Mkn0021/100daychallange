@@ -56,7 +56,7 @@ const OverviewCard = ({
 );
 
 export const CardTitle = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="text-[30px] font-bold lg:text-[40px]">{children}</h3>
+    <h3 className="text-[1.88rem] font-bold lg:text-[2.5rem]">{children}</h3>
 );
 
 export const CardSubtitle = ({
@@ -65,4 +65,4 @@ export const CardSubtitle = ({
 }: {
     children: React.ReactNode;
     className?: string;
-}) => <p className={cn("text-[16px] leading-7.5 lg:text-[20px]", className)}>{children}</p>;
+}) => <p className={cn("text-base leading-7.5 lg:text-xl", className)}>{children}</p>;

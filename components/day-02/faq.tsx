@@ -88,10 +88,10 @@ const FAQItem = ({
             >
                 <ArrowDownIcon />
             </div>
-            <h3 className="text-accent text-left text-[20px] font-medium">{question}</h3>
+            <h3 className="text-accent text-left text-xl font-medium">{question}</h3>
         </div>
         {isOpen && (
-            <p className="text-accent mt-4 text-left text-[14px] leading-relaxed">{answer}</p>
+            <p className="text-accent mt-4 text-left text-sm leading-relaxed">{answer}</p>
         )}
     </button>
 );

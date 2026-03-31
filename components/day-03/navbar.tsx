@@ -36,7 +36,7 @@ export const Navbar = () => (
                 <Link
                     key={link.title}
                     href={link.href}
-                    className="hidden text-[20px] font-medium lg:block xl:text-[25px]"
+                    className="hidden text-xl font-medium lg:block xl:text-[1.56rem]"
                 >
                     {link.title}
                 </Link>
@@ -45,4 +45,4 @@ export const Navbar = () => (
     </Section>
 );
 
-const Logo = () => <p className="text-[30px] font-bold md:text-[50px]">nexus</p>;
+const Logo = () => <p className="text-[1.88rem] font-bold md:text-[3.12rem]">nexus</p>;

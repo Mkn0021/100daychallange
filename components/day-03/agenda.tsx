@@ -40,7 +40,7 @@ export const Agenda = () => (
         >
             {EVENT_DAYS.map((day) => (
                 <div key={day.title} className="grid grid-cols-1 xl:grid-cols-3">
-                    <h3 className="mb-2 text-[18px] font-bold md:text-[20px] xl:mb-0 xl:text-[40px]">
+                    <h3 className="mb-2 text-[1.12rem] font-bold md:text-xl xl:mb-0 xl:text-[2.5rem]">
                         {day.title} <br className="hidden xl:block" />
                         {day.time}
                     </h3>

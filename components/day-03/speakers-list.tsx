@@ -55,7 +55,7 @@ export const SpeakerList = () => (
             {Speakers.map((speaker, index) => (
                 <SpeakerCard key={index} image={speaker.image} className={speaker.className}>
                     <CardTitle>{speaker.name}</CardTitle>
-                    <CardSubtitle className="text-[14px] md:text-[20px]">
+                    <CardSubtitle className="text-sm md:text-xl">
                         {speaker.role},
                         <br /> {speaker.company}
                     </CardSubtitle>
@@ -95,5 +95,5 @@ const SpeakerCard = ({
 );
 
 export const CardTitle = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="text-[20px] font-semibold md:text-[30px]">{children}</h3>
+    <h3 className="text-xl font-semibold md:text-[1.88rem]">{children}</h3>
 );

@@ -50,10 +50,10 @@ export const WhySection = () => (
                         key={index}
                     >
                         <feature.icon className="mb-6.25 h-10 lg:h-5" />
-                        <h3 className="text-left text-[14px] font-semibold sm:text-center lg:text-left lg:text-[20px]">
+                        <h3 className="text-left text-sm font-semibold sm:text-center lg:text-left lg:text-xl">
                             {feature.title}
                         </h3>
-                        <p className="mt-3.75 block text-[16px] sm:hidden lg:block">
+                        <p className="mt-3.75 block text-base sm:hidden lg:block">
                             {feature.description}
                         </p>
                     </SectionCard>
@@ -73,7 +73,7 @@ export const WhySection = () => (
                     </MobilePreview>
                 </SectionCard>
                 <div className="flex flex-col items-start justify-between gap-11 py-6.25">
-                    <h3 className="text-[30px] leading-snug font-medium xl:text-[36px]">
+                    <h3 className="text-[1.88rem] leading-snug font-medium xl:text-4xl">
                         Join thousands of users from top companies using Habitus to build better
                         habits
                     </h3>

@@ -35,7 +35,7 @@ export const SectionTitle = ({
     return (
         <Component
             className={cn(
-                "text-center text-[44px] leading-tight font-bold tracking-tight sm:text-[60px]",
+                "text-center text-[2.75rem] leading-tight font-bold tracking-tight sm:text-6xl",
                 className
             )}
         >
@@ -45,7 +45,7 @@ export const SectionTitle = ({
 };
 
 export const SectionSubTitle = ({ className, children }: SectionProps) => (
-    <p className={cn("text-center text-[18px] font-light sm:text-[20px]", className)}>{children}</p>
+    <p className={cn("text-center text-[1.12rem] font-light sm:text-xl", className)}>{children}</p>
 );
 
 export const SectionContent = ({ className, children }: SectionProps) => (

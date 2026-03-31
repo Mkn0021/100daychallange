@@ -7,12 +7,12 @@ export const HeroSection = () => (
             variant="accent"
             className="relative overflow-hidden rounded-[20px] px-6 py-12 md:rounded-[50px] md:px-15 md:py-22.5"
         >
-            <div className="flex flex-col justify-between gap-2 text-[14px] font-bold md:text-[22px] xl:flex-row">
+            <div className="flex flex-col justify-between gap-2 text-sm font-bold md:text-[1.38rem] xl:flex-row">
                 <p>OCTOBER 15-17, 2052</p>
                 <p>Horizon Convention Center, TechCity, Utopolis</p>
             </div>
             <SectionTitle className="relative z-1 mt-20">NEXT-GEN AI SUMMIT</SectionTitle>
-            <p className="relative z-1 mt-7.5 max-w-3xl text-[22px]">
+            <p className="relative z-1 mt-7.5 max-w-3xl text-[1.38rem]">
                 Explore the cutting-edge innovations shaping the future of artificial intelligence.
                 Join global leaders and visionaries for two days of insights, discussions, and
                 breakthroughs.

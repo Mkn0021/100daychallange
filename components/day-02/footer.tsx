@@ -8,7 +8,7 @@ export const Footer = () => (
         <SectionContent className="bg-accent mt-0 mb-25 grid grid-cols-1 gap-7 rounded-[20px] p-8 pt-17.5 pb-7.5 sm:grid-cols-6 sm:gap-0 sm:rounded-[40px] sm:px-12.5">
             <div className="max-w-84 sm:col-span-4 lg:col-span-2">
                 <Logo className="h-10 w-auto text-white" />
-                <p className="mt-7.5 text-left text-[16px] text-(--dark-grey)">
+                <p className="mt-7.5 text-left text-base text-(--dark-grey)">
                     Track your daily routines, stay consistent, and turn goals into habits — all in
                     one beautiful app.
                 </p>
@@ -63,7 +63,7 @@ const FooterSection = ({
             className
         )}
     >
-        <h3 className="mb-4.5 text-[16px] font-semibold">{title}</h3>
+        <h3 className="mb-4.5 text-base font-semibold">{title}</h3>
         {children}
     </div>
 );

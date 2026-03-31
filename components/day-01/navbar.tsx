@@ -13,7 +13,7 @@ const NavLinks = [
 export const Navbar = () => (
     <nav className="mt-10 flex w-full items-center justify-between gap-10 px-8 py-2.5 sm:px-25">
         <Logo className="h-4.5 sm:h-6.5" />
-        <div className="hidden items-center gap-4 text-[18px] sm:text-[20px] lg:flex">
+        <div className="hidden items-center gap-4 text-[1.12rem] sm:text-xl lg:flex">
             {NavLinks.map((link) => (
                 <Link
                     key={link.name}

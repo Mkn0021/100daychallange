@@ -9,7 +9,7 @@ export const CheckBox = ({
     label: ReactNode;
     className?: string;
 }) => (
-    <label className="flex items-center gap-2 text-[16px] sm:text-[18px]">
+    <label className="flex items-center gap-2 text-base sm:text-[1.12rem]">
         <input
             type="radio"
             {...props}
@@ -35,7 +35,7 @@ export const FormInput = ({
 }) => (
     <div className="flex flex-col gap-1.25">
         {label ? (
-            <label htmlFor={id ?? name} className="text-[16px]">
+            <label htmlFor={id ?? name} className="text-base">
                 {label}
             </label>
         ) : null}
@@ -65,7 +65,7 @@ export const TextArea = ({
 }) => (
     <div className="flex flex-col gap-1.25">
         {label ? (
-            <label htmlFor={id ?? name} className="text-[16px]">
+            <label htmlFor={id ?? name} className="text-base">
                 {label}
             </label>
         ) : null}

@@ -18,10 +18,10 @@ export const HeroSection = () => (
     <Container>
         <Navbar />
         <main className="z-10 flex max-w-2xl flex-col items-center text-center">
-            <h1 className="mt-30 text-[48px] leading-tight font-medium sm:text-[60px]">
+            <h1 className="mt-30 text-5xl leading-tight font-medium sm:text-6xl">
                 Build Better Habits, One Day at a Time
             </h1>
-            <p className="mt-7.5 text-[18px] sm:text-[22px]">
+            <p className="mt-7.5 text-[1.12rem] sm:text-[1.38rem]">
                 Track your daily routines, stay consistent, and turn goals into habits — all in one
                 beautiful app.
             </p>
@@ -53,7 +53,7 @@ const Navbar = () => (
         <Logo className="h-9" />
         <div className="hidden gap-7.5 lg:flex">
             {NavLinks.map((link) => (
-                <Link key={link.label} href={link.href} className="text-[18px] text-white">
+                <Link key={link.label} href={link.href} className="text-[1.12rem] text-white">
                     {link.label}
                 </Link>
             ))}

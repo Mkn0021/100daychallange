@@ -99,11 +99,11 @@ const TeamCard = ({
         <div className="flex gap-5">
             <Avatar image={image} />
             <p className="mt-auto text-left">
-                <strong className="block text-[18px] font-medium sm:text-[20px]">{name}</strong>
-                <span className="text-[16px] sm:text-[18px]">{role}</span>
+                <strong className="block text-[1.12rem] font-medium sm:text-xl">{name}</strong>
+                <span className="text-base sm:text-[1.12rem]">{role}</span>
             </p>
         </div>
         <div className="bg-accent h-px w-full" />
-        <p className="text-left text-[16px] text-balance sm:text-[18px]">{description}</p>
+        <p className="text-left text-base text-balance sm:text-[1.12rem]">{description}</p>
     </SectionCard>
 );

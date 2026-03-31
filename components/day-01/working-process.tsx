@@ -65,9 +65,9 @@ export const WorkingProcess = () => {
                         className="flex w-full cursor-pointer flex-col items-center justify-between gap-7.5 sm:px-15 sm:py-10"
                     >
                         <div className="flex w-full items-center justify-between text-center">
-                            <h3 className="xs:text-[36px] flex items-center text-[28px] font-medium sm:text-[60px]">
+                            <h3 className="xs:text-4xl flex items-center text-[1.75rem] font-medium sm:text-6xl">
                                 {step.number}.{" "}
-                                <span className="xs:text-[24px] ml-2 text-left text-[18px] sm:ml-6 sm:text-[30px]">
+                                <span className="xs:text-2xl ml-2 text-left text-[1.12rem] sm:ml-6 sm:text-[1.88rem]">
                                     {step.title}
                                 </span>
                             </h3>
@@ -82,7 +82,7 @@ export const WorkingProcess = () => {
                         {expandedId === step.id && (
                             <>
                                 <div className="bg-accent h-px w-full" />
-                                <p className="xs:text-[16px] w-full text-[12px] sm:text-[18px]">
+                                <p className="xs:text-base w-full text-xs sm:text-[1.12rem]">
                                     {step.description}
                                 </p>
                             </>

@@ -32,7 +32,7 @@ export const Footer = () => (
         <SectionContent className="bg-accent px-8 pt-13.75 text-white sm:px-15 xl:rounded-t-[45px]">
             <div className="flex flex-col items-center justify-between gap-6.75 lg:flex-row">
                 <Logo className="h-6.5" />
-                <div className="flex flex-col items-center gap-6.75 text-[16px] underline underline-offset-4 sm:flex-row sm:text-[18px] md:gap-10">
+                <div className="flex flex-col items-center gap-6.75 text-base underline underline-offset-4 sm:flex-row sm:text-[1.12rem] md:gap-10">
                     {FooterLinks.map((link, index) => (
                         <Link
                             key={index}
@@ -50,8 +50,8 @@ export const Footer = () => (
                 </div>
             </div>
             <div className="flex flex-col items-center justify-between gap-10 py-12.5 lg:mt-11.5 lg:flex-row">
-                <div className="flex flex-col items-center gap-6.75 text-[16px] sm:text-[18px] lg:items-start">
-                    <SectionTitle className="text-accent w-fit text-[18px] sm:text-[20px]">
+                <div className="flex flex-col items-center gap-6.75 text-base sm:text-[1.12rem] lg:items-start">
+                    <SectionTitle className="text-accent w-fit text-[1.12rem] sm:text-xl">
                         Contact us:
                     </SectionTitle>
                     <p>Email: info@positivus.com</p>

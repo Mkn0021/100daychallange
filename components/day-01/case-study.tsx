@@ -41,11 +41,11 @@ export const CaseStudy = () => (
 );
 
 const Card = ({ children }: { children: React.ReactNode }) => (
-    <div className="flex w-full flex-col items-start gap-5 text-[16px] text-white sm:text-[18px] xl:max-w-75">
+    <div className="flex w-full flex-col items-start gap-5 text-base text-white sm:text-[1.12rem] xl:max-w-75">
         <p>{children}</p>
         <Link
             href="#"
-            className="text-primary hover:text-primary/80 flex items-center gap-4 text-[18px] sm:text-[20px]"
+            className="text-primary hover:text-primary/80 flex items-center gap-4 text-[1.12rem] sm:text-xl"
         >
             Learn More
             <ArrowIcon />

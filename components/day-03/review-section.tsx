@@ -44,7 +44,7 @@ const Reviews: Review[] = [
 
 export const ReviewSection = () => (
     <Section className="mt-41.5 sm:mt-41.5">
-        <h2 className="text-[36px] font-bold md:text-[50px]">What Past Attendees Say</h2>
+        <h2 className="text-4xl font-bold md:text-[3.12rem]">What Past Attendees Say</h2>
         <SectionContent className="mt-22.5 grid grid-cols-1 gap-15 sm:mt-22.5 lg:grid-cols-2 lg:gap-5 xl:grid-cols-3">
             {Reviews.map((review) => (
                 <SectionCard
@@ -52,11 +52,11 @@ export const ReviewSection = () => (
                     variant={review.variant}
                     className="flex h-full flex-col justify-between"
                 >
-                    <h4 className="text-[24px] font-bold break-keep md:text-[30px]">
+                    <h4 className="text-2xl font-bold break-keep md:text-[1.88rem]">
                         {review.title}
                     </h4>
 
-                    <CardSubtitle className="mt-6 text-[14px] md:text-[16px]">
+                    <CardSubtitle className="mt-6 text-sm md:text-base">
                         &ldquo;{review.quote}&rdquo;
                     </CardSubtitle>
 
@@ -69,7 +69,7 @@ export const ReviewSection = () => (
                             className="rounded-full"
                         />
 
-                        <p className="text-[12px] md:text-[18px]">
+                        <p className="text-xs md:text-[1.12rem]">
                             {review.name} <br />
                             <span className="md:text-nowrap">{review.position}</span>
                         </p>

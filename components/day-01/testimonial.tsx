@@ -99,8 +99,8 @@ const TestimonialCard = ({
             {children}
         </p>
         <div className="mt-10 text-center">
-            <strong className="text-primary block text-[18px] sm:text-[20px]">{name}</strong>
-            <span className="text-[18px] text-white sm:text-[20px]">{role}</span>
+            <strong className="text-primary block text-[1.12rem] sm:text-xl">{name}</strong>
+            <span className="text-[1.12rem] text-white sm:text-xl">{role}</span>
         </div>
     </div>
 );

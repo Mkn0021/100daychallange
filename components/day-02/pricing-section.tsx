@@ -81,17 +81,17 @@ const PricingCard = ({
     >
         {variant === "primary" && badge && (
             <div className="pointer-events-none absolute top-0 right-0 px-10 py-12 sm:p-17.5">
-                <Button variant="primary" className="px-3 py-1.25 text-[14px] font-normal">
+                <Button variant="primary" className="px-3 py-1.25 text-sm font-normal">
                     {badge}
                 </Button>
             </div>
         )}
 
         <div>
-            <h3 className="text-[24px] font-semibold">{title}</h3>
+            <h3 className="text-2xl font-semibold">{title}</h3>
             <p
                 className={cn(
-                    "text-[16px] text-(--grey)",
+                    "text-base text-(--grey)",
                     variant === "primary" && "text-(--dark-grey)"
                 )}
             >
@@ -100,10 +100,10 @@ const PricingCard = ({
         </div>
 
         <div className="mt-12.5">
-            <h4 className="flex items-end gap-1 text-[36px] font-bold">
+            <h4 className="flex items-end gap-1 text-4xl font-bold">
                 {price}
                 {variant === "primary" && period && (
-                    <span className="mb-2 text-[16px] font-normal text-(--dark-grey)">
+                    <span className="mb-2 text-base font-normal text-(--dark-grey)">
                         {period}
                     </span>
                 )}
