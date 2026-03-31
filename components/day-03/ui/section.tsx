@@ -49,7 +49,7 @@ export const SectionSubTitle = ({ className, children }: SectionProps) => (
 );
 
 export const SectionContent = ({ className, children }: SectionProps) => (
-    <div className={cn("mt-27.5 sm:mt-20", className)}>{children}</div>
+    <div className={cn("mt-20 sm:mt-27.5", className)}>{children}</div>
 );
 
 export const SectionCard = ({
