@@ -43,7 +43,7 @@ export const CTABanner = () => (
             <CTAIllustration className="absolute right-0 bottom-0" />
         </SectionCard>
         <h3 className="mt-25 text-[50px] font-bold">Ticket Options</h3>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 gap-5 xl:grid-cols-3">
             {Tickets.map((ticket) => (
                 <SectionCard
                     key={ticket.label}
@@ -70,7 +70,7 @@ function TimerDisplay({ time }: { time: string }) {
     const [days, hours, minutes] = time.split(":");
 
     return (
-        <div className="flex items-end gap-4">
+        <div className="relative z-1 flex items-end gap-4">
             <TimeUnit value={days} label="DAYS" />
             <p className="mb-6 text-[200px] leading-none">:</p>
             <TimeUnit value={hours} label="HOURS" />

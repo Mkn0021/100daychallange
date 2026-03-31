@@ -28,15 +28,15 @@ const NavLinks = [
 export const Navbar = () => (
     <Section as="nav" className="mt-10 flex items-center justify-between sm:mt-10">
         <Logo />
-        <div className="flex items-center gap-7">
-            <Button variant="outline" className="h-16">
+        <div className="flex items-center gap-4 xl:gap-7">
+            <Button variant="outline" className="h-14 xl:h-16">
                 Home
             </Button>
             {NavLinks.map((link) => (
                 <Link
                     key={link.title}
                     href={link.href}
-                    className="hidden text-[25px] font-medium lg:block"
+                    className="hidden text-[20px] font-medium lg:block xl:text-[25px]"
                 >
                     {link.title}
                 </Link>

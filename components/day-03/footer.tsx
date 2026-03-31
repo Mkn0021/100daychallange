@@ -41,7 +41,7 @@ const FooterItems = [
 
 export const Footer = () => (
     <Section className="my-25 sm:my-25" as="footer">
-        <SectionCard variant="secondary" className="grid grid-cols-2 py-0 pr-0">
+        <SectionCard variant="secondary" className="grid grid-cols-1 p-0 xl:grid-cols-2">
             <LeftColumn />
             <RightColumn />
         </SectionCard>
@@ -49,7 +49,7 @@ export const Footer = () => (
 );
 
 const LeftColumn = () => (
-    <div className="flex flex-col justify-between py-17.5">
+    <div className="flex flex-col justify-between px-15 py-17.5">
         <h3 className="text-[30px] font-bold">Next-Gen AI Summit 2052</h3>
         <div className="mt-10 grid grid-cols-2 gap-3.75 text-[20px]">
             <div>
@@ -74,7 +74,7 @@ const LeftColumn = () => (
 );
 
 const RightColumn = () => (
-    <SectionCard variant="primary" className="">
+    <SectionCard variant="primary">
         <h3 className="text-[26px] font-bold uppercase">Stay updated</h3>
         <CardSubtitle>Subscribe for event updates & exclusive content.</CardSubtitle>
         <input

@@ -17,28 +17,28 @@ const Speakers = [
         name: "Dr. Emily Carter",
         role: "Chief AI Scientist",
         company: "OpenAI",
-        className: "",
+        className: "xl:flex-row",
         image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=faces&q=80",
     },
     {
         name: "Michael Chen",
         role: "Head of Product",
         company: "Google",
-        className: "",
+        className: "flex-row-reverse xl:flex-row",
         image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=faces&q=80",
     },
     {
         name: "Sarah Johnson",
         role: "UX Director",
         company: "Meta",
-        className: "flex-row-reverse",
+        className: "xl:flex-row-reverse",
         image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop&crop=faces&q=80",
     },
     {
         name: "David Kim",
         role: "CTO",
         company: "Stripe",
-        className: "flex-row-reverse",
+        className: "flex-row-reverse xl:flex-row-reverse",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces&q=80",
     },
 ];
@@ -51,7 +51,7 @@ export const SpeakerList = () => (
                 Meet the industry leaders shaping the future of AI.
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-2 gap-5">
+        <SectionContent className="grid grid-cols-1 gap-5 xl:grid-cols-2">
             {Speakers.map((speaker, index) => (
                 <SpeakerCard key={index} image={speaker.image} className={speaker.className}>
                     <CardTitle>{speaker.name}</CardTitle>

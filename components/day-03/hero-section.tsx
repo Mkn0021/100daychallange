@@ -4,12 +4,12 @@ import { Section, SectionCard, SectionContent, SectionTitle } from "./ui/section
 export const HeroSection = () => (
     <Section className="mt-15 sm:mt-15">
         <SectionCard variant="accent" className="relative py-22.5">
-            <div className="flex justify-between text-[22px] font-bold">
+            <div className="flex flex-col justify-between gap-2 text-[22px] font-bold xl:flex-row">
                 <p>OCTOBER 15-17, 2052</p>
                 <p>Horizon Convention Center, TechCity, Utopolis</p>
             </div>
-            <SectionTitle className="mt-20">NEXT-GEN AI SUMMIT</SectionTitle>
-            <p className="mt-7.5 max-w-3xl text-[22px]">
+            <SectionTitle className="relative z-1 mt-20">NEXT-GEN AI SUMMIT</SectionTitle>
+            <p className="relative z-1 mt-7.5 max-w-3xl text-[22px]">
                 Explore the cutting-edge innovations shaping the future of artificial intelligence.
                 Join global leaders and visionaries for two days of insights, discussions, and
                 breakthroughs.

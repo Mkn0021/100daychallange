@@ -12,21 +12,21 @@ import { cn } from "@/lib/utils";
 const Features = [
     {
         number: "01",
-        className: "-ml-11.5",
+        className: "xl:flex-row xl:-ml-11.5",
         title: "Cutting-Edge Insights",
         description:
             "Gain firsthand knowledge from top AI experts and pioneers shaping the industry.",
     },
     {
         number: "02",
-        className: "-ml-11.5",
+        className: "flex-row-reverse -mr-11.5 xl:flex-row xl:-ml-11.5",
         title: "Hands-On Workshops",
         description:
             "Participate in interactive sessions designed to apply AI concepts in real-world scenarios.",
     },
     {
         number: "03",
-        className: "flex-row-reverse -mr-11.5",
+        className: "xl:flex-row-reverse xl:-mr-11.5",
         title: "Networking Opportunities",
         description:
             "Connect with industry leaders, innovators, and fellow enthusiasts to expand your professional circle.",
@@ -49,7 +49,7 @@ export const WhyAttend = () => (
                 innovators, and industry leaders.
             </SectionSubTitle>
         </SectionHeader>
-        <SectionContent className="grid grid-cols-2 gap-5">
+        <SectionContent className="grid grid-cols-1 gap-5 xl:grid-cols-2">
             {Features.map((feature) => (
                 <SectionCard
                     key={feature.number}

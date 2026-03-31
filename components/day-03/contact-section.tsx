@@ -6,7 +6,10 @@ import { Button } from "./ui/button";
 
 export const ContactSection = () => (
     <Section className="mt-45 sm:mt-45">
-        <SectionCard variant="accent" className="grid grid-cols-2 gap-21.25 px-12.5 py-22.5">
+        <SectionCard
+            variant="accent"
+            className="grid grid-cols-1 gap-21.25 px-12.5 py-22.5 xl:grid-cols-2"
+        >
             <div>
                 <h2 className="text-[50px] font-bold">We’re here to connect and assist you</h2>
                 <CardSubtitle className="mt-7.5">
@@ -44,7 +47,7 @@ export const ContactSection = () => (
                     Send Message
                 </Button>
             </SectionCard>
-            <div className="bg-secondary relative col-span-2 h-142.5 w-full overflow-hidden rounded-[50px]">
+            <div className="bg-secondary relative h-142.5 w-full overflow-hidden rounded-[50px] xl:col-span-2">
                 <Image
                     className="h-full w-full object-cover"
                     src="/day-03/map.jpg"
