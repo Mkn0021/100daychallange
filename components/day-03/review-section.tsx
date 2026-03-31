@@ -44,7 +44,7 @@ const Reviews: Review[] = [
 
 export const ReviewSection = () => (
     <Section className="mt-41.5 sm:mt-41.5">
-        <h2 className="text-[50px] font-bold">What Past Attendees Say</h2>
+        <h2 className="text-[36px] font-bold md:text-[50px]">What Past Attendees Say</h2>
         <SectionContent className="mt-22.5 grid grid-cols-1 gap-15 sm:mt-22.5 lg:grid-cols-2 lg:gap-5 xl:grid-cols-3">
             {Reviews.map((review) => (
                 <SectionCard
@@ -52,11 +52,15 @@ export const ReviewSection = () => (
                     variant={review.variant}
                     className="flex h-full flex-col justify-between"
                 >
-                    <h4 className="text-[30px] font-bold break-keep">{review.title}</h4>
+                    <h4 className="text-[24px] font-bold break-keep md:text-[30px]">
+                        {review.title}
+                    </h4>
 
-                    <CardSubtitle className="mt-6">"{review.quote}"</CardSubtitle>
+                    <CardSubtitle className="mt-6 text-[14px] md:text-[16px]">
+                        "{review.quote}"
+                    </CardSubtitle>
 
-                    <div className="mt-12.5 flex items-center gap-10">
+                    <div className="mt-12.5 flex items-center gap-5 md:gap-10">
                         <Image
                             height={50}
                             width={50}
@@ -65,9 +69,9 @@ export const ReviewSection = () => (
                             className="rounded-full"
                         />
 
-                        <p className="text-[18px]">
+                        <p className="text-[12px] md:text-[18px]">
                             {review.name} <br />
-                            <span className="text-nowrap">{review.position}</span>
+                            <span className="md:text-nowrap">{review.position}</span>
                         </p>
                     </div>
                 </SectionCard>

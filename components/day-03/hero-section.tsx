@@ -1,10 +1,13 @@
 import { Button } from "./ui/button";
-import { Section, SectionCard, SectionContent, SectionTitle } from "./ui/section";
+import { Section, SectionCard, SectionTitle } from "./ui/section";
 
 export const HeroSection = () => (
-    <Section className="mt-15 sm:mt-15">
-        <SectionCard variant="accent" className="relative overflow-hidden py-22.5">
-            <div className="flex flex-col justify-between gap-2 text-[22px] font-bold xl:flex-row">
+    <Section className="mt-15 px-2 sm:mt-15 md:px-8">
+        <SectionCard
+            variant="accent"
+            className="relative overflow-hidden rounded-[20px] px-6 py-12 md:rounded-[50px] md:px-15 md:py-22.5"
+        >
+            <div className="flex flex-col justify-between gap-2 text-[14px] font-bold md:text-[22px] xl:flex-row">
                 <p>OCTOBER 15-17, 2052</p>
                 <p>Horizon Convention Center, TechCity, Utopolis</p>
             </div>
@@ -14,10 +17,10 @@ export const HeroSection = () => (
                 Join global leaders and visionaries for two days of insights, discussions, and
                 breakthroughs.
             </p>
-            <Button link variant="primary" className="mt-27.5">
+            <Button link variant="primary" className="relative z-1 mt-27.5">
                 Early bird tickets
             </Button>
-            <HeroIllustration className="absolute -right-15 -bottom-15 xl:right-30 xl:bottom-12.5" />
+            <HeroIllustration className="absolute -right-15 -bottom-20 md:-bottom-15 xl:right-30 xl:bottom-12.5" />
         </SectionCard>
     </Section>
 );

@@ -38,9 +38,9 @@ export const CTABanner = () => (
             </SectionSubTitle>
         </SectionHeader>
         <SectionCard className="relative mt-15 overflow-hidden p-12 xl:p-24" variant="accent">
-            <h4 className="text-[20px]">Early Bird Pricing Ends In:</h4>
+            <h4 className="text-[18px] md:text-[20px]">Early Bird Pricing Ends In:</h4>
             <TimerDisplay time="12:05:30" />
-            <CTAIllustration className="absolute right-0 -bottom-5 h-60 lg:bottom-0 lg:h-80" />
+            <CTAIllustration className="absolute -right-50 -bottom-5 h-120 md:right-0 md:h-60 lg:bottom-0 lg:h-80" />
         </SectionCard>
         <h3 className="mt-25 text-[50px] font-bold">Ticket Options</h3>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3">
@@ -70,11 +70,11 @@ function TimerDisplay({ time }: { time: string }) {
     const [days, hours, minutes] = time.split(":");
 
     return (
-        <div className="relative z-1 flex items-end gap-4">
+        <div className="relative z-1 flex flex-col items-center gap-4 md:flex-row md:items-end">
             <TimeUnit value={days} label="DAYS" />
-            <p className="mb-6 text-[100px] leading-none lg:text-[200px]">:</p>
+            <p className="mb-6 hidden text-[100px] leading-none md:block lg:text-[200px]">:</p>
             <TimeUnit value={hours} label="HOURS" />
-            <p className="mb-6 text-[100px] leading-none lg:text-[200px]">:</p>
+            <p className="mb-6 hidden text-[100px] leading-none md:block lg:text-[200px]">:</p>
             <TimeUnit value={minutes} label="MINUTES" />
         </div>
     );
@@ -82,7 +82,7 @@ function TimerDisplay({ time }: { time: string }) {
 
 const TimeUnit = ({ value, label }: { value: string; label: string }) => (
     <div className="flex flex-col items-center">
-        <p className="text-[100px] leading-none lg:text-[200px]">{value}</p>
+        <p className="text-[200px] leading-none md:text-[100px] lg:text-[200px]">{value}</p>
         <p className="mt-2 text-sm tracking-widest">{label}</p>
     </div>
 );

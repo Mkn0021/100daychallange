@@ -5,18 +5,20 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 
 export const ContactSection = () => (
-    <Section className="mt-45 sm:mt-45">
+    <Section className="mt-45 px-2 sm:mt-45 md:px-8">
         <SectionCard
             variant="accent"
-            className="grid grid-cols-1 gap-21.25 px-12.5 py-22.5 xl:grid-cols-2"
+            className="grid grid-cols-1 gap-21.25 rounded-[20px] px-2 py-12 md:rounded-[50px] md:py-22.5 xl:grid-cols-2"
         >
-            <div>
-                <h2 className="text-[50px] font-bold">We’re here to connect and assist you</h2>
-                <CardSubtitle className="mt-7.5">
+            <div className="px-4 md:px-10.5">
+                <h2 className="text-[36px] font-bold md:text-[50px]">
+                    We’re here to connect and assist you
+                </h2>
+                <CardSubtitle className="mt-7.5 text-[16px] md:text-[20px]">
                     Have questions about the summit? Need help with registration or travel? Our team
                     is ready to assist you.
                 </CardSubtitle>
-                <div className="mt-25 grid grid-cols-2 gap-15">
+                <div className="mt-25 grid grid-cols-1 gap-15 md:grid-cols-2">
                     <Card title="Contact Us">
                         <CardSubtitle>+31 20 123 4567</CardSubtitle>
                     </Card>
@@ -32,7 +34,7 @@ export const ContactSection = () => (
                 </div>
             </div>
             <SectionCard
-                className="flex h-full flex-col justify-between py-18.75"
+                className="flex h-full flex-col justify-between rounded-[20px] px-8 py-12 md:rounded-[50px] md:px-15 md:py-18.75"
                 variant="secondary"
             >
                 <CardTitle>Get in touch</CardTitle>
@@ -47,7 +49,7 @@ export const ContactSection = () => (
                     Send Message
                 </Button>
             </SectionCard>
-            <div className="bg-secondary relative h-142.5 w-full overflow-hidden rounded-[50px] xl:col-span-2">
+            <div className="bg-secondary relative h-60 w-full overflow-hidden rounded-[20px] md:h-142.5 md:rounded-[50px] xl:col-span-2">
                 <Image
                     className="h-full w-full object-cover"
                     src="/day-03/map.jpg"

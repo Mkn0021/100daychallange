@@ -5,11 +5,11 @@ import { LinkArrow } from "./ui/icons";
 import { Button } from "./ui/button";
 
 export const OverviewSection = () => (
-    <Section className="mt-30 grid grid-cols-9 gap-5 sm:mt-30">
-        <OverviewCard variant="primary" className="col-span-4 row-span-2">
+    <Section className="mt-30 grid grid-cols-2 gap-5 sm:mt-30 lg:grid-cols-9">
+        <OverviewCard variant="primary" className="col-span-2 lg:col-span-4 lg:row-span-2">
             <CardTitle>Speakers</CardTitle>
-            <div className="flex h-30 items-start justify-between gap-12.5">
-                <div className="bg-secondary text-primary flex size-18.5 shrink-0 items-center justify-center rounded-full">
+            <div className="flex items-start justify-between gap-12.5 md:h-30">
+                <div className="bg-secondary text-primary hidden size-18.5 shrink-0 items-center justify-center rounded-full md:flex">
                     <LinkArrow className="h-6" />
                 </div>
                 <CardSubtitle>
@@ -17,18 +17,18 @@ export const OverviewSection = () => (
                     future of artificial intelligence.
                 </CardSubtitle>
             </div>
-            <Button variant="outline" link className="mt-auto ml-auto">
+            <Button variant="outline" link className="mt-auto md:ml-auto">
                 And more
             </Button>
         </OverviewCard>
-        <OverviewCard variant="primary" className="col-span-5">
+        <OverviewCard variant="primary" className="col-span-2 md:col-span-1 lg:col-span-5">
             <CardTitle>Technologies</CardTitle>
             <CardSubtitle>
                 Explore advanced machine learning, natural language processing, AI-driven
                 automation, and emerging cybersecurity applications.
             </CardSubtitle>
         </OverviewCard>
-        <OverviewCard variant="secondary" className="col-span-5">
+        <OverviewCard variant="secondary" className="col-span-2 md:col-span-1 lg:col-span-5">
             <CardTitle>Networking Opportunities</CardTitle>
             <CardSubtitle>
                 Enjoy exclusive networking sessions, roundtables, and social events to foster
@@ -56,7 +56,7 @@ const OverviewCard = ({
 );
 
 export const CardTitle = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="text-[40px] font-bold">{children}</h3>
+    <h3 className="text-[30px] font-bold lg:text-[40px]">{children}</h3>
 );
 
 export const CardSubtitle = ({
@@ -65,4 +65,4 @@ export const CardSubtitle = ({
 }: {
     children: React.ReactNode;
     className?: string;
-}) => <p className={cn("text-[20px] leading-7.5 text-balance", className)}>{children}</p>;
+}) => <p className={cn("text-[16px] leading-7.5 lg:text-[20px]", className)}>{children}</p>;

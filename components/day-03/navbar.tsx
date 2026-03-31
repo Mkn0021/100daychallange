@@ -26,10 +26,10 @@ const NavLinks = [
 ];
 
 export const Navbar = () => (
-    <Section as="nav" className="mt-10 flex items-center justify-between sm:mt-10">
+    <Section as="nav" className="mt-10 flex items-center justify-between sm:mt-10 md:mt-10">
         <Logo />
         <div className="flex items-center gap-4 xl:gap-7">
-            <Button variant="outline" className="h-14 xl:h-16">
+            <Button variant="outline" className="h-11 md:h-14 xl:h-16">
                 Home
             </Button>
             {NavLinks.map((link) => (
@@ -45,4 +45,4 @@ export const Navbar = () => (
     </Section>
 );
 
-const Logo = () => <p className="text-[50px] font-bold">nexus</p>;
+const Logo = () => <p className="text-[30px] font-bold md:text-[50px]">nexus</p>;

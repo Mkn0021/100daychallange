@@ -44,7 +44,7 @@ const Speakers = [
 ];
 
 export const SpeakerList = () => (
-    <Section>
+    <Section className="max-w-screen overflow-hidden">
         <SectionHeader className="items-start">
             <SectionTitle>KEYNOTE SPEAKERS</SectionTitle>
             <SectionSubTitle className="mt-2">
@@ -55,7 +55,7 @@ export const SpeakerList = () => (
             {Speakers.map((speaker, index) => (
                 <SpeakerCard key={index} image={speaker.image} className={speaker.className}>
                     <CardTitle>{speaker.name}</CardTitle>
-                    <CardSubtitle>
+                    <CardSubtitle className="text-[14px] md:text-[20px]">
                         {speaker.role},
                         <br /> {speaker.company}
                     </CardSubtitle>
@@ -80,7 +80,7 @@ const SpeakerCard = ({
     <div className={cn("flex gap-5", className)}>
         <SectionCard
             variant="secondary"
-            className="flex aspect-295/452 h-113 flex-col justify-between px-10 py-12.5"
+            className="flex h-70 min-w-60 flex-col justify-between px-10 py-12.5 sm:aspect-295/452 sm:h-113 sm:min-w-0"
         >
             {children}
         </SectionCard>
@@ -89,11 +89,11 @@ const SpeakerCard = ({
             width={295}
             src={image}
             alt="Speaker"
-            className="h-full rounded-[50px] object-cover mix-blend-luminosity"
+            className="h-full w-[50%] rounded-[50px] object-cover mix-blend-luminosity sm:aspect-295/452 md:w-auto"
         />
     </div>
 );
 
 export const CardTitle = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="text-[30px] font-semibold">{children}</h3>
+    <h3 className="text-[20px] font-semibold md:text-[30px]">{children}</h3>
 );
