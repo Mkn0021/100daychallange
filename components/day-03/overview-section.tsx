@@ -65,4 +65,4 @@ export const CardSubtitle = ({
 }: {
     children: React.ReactNode;
     className?: string;
-}) => <p className={cn("text-[20px] leading-7.5", className)}>{children}</p>;
+}) => <p className={cn("text-[20px] leading-7.5 text-balance", className)}>{children}</p>;
