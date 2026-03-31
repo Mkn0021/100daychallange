@@ -45,7 +45,7 @@ const Reviews: Review[] = [
 export const ReviewSection = () => (
     <Section className="mt-41.5 sm:mt-41.5">
         <h2 className="text-[50px] font-bold">What Past Attendees Say</h2>
-        <SectionContent className="mt-22.5 grid grid-cols-2 gap-5 sm:mt-22.5 xl:grid-cols-3">
+        <SectionContent className="mt-22.5 grid grid-cols-1 gap-15 sm:mt-22.5 lg:grid-cols-2 lg:gap-5 xl:grid-cols-3">
             {Reviews.map((review) => (
                 <SectionCard
                     key={review.id}

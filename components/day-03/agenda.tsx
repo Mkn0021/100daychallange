@@ -29,7 +29,7 @@ const EVENT_DAYS = [
 
 export const Agenda = () => (
     <Section>
-        <SectionHeader>
+        <SectionHeader className="flex-row gap-21.25">
             <SectionTitle>Agenda</SectionTitle>
             <SectionSubTitle>
                 October 15-17, 2052 | Horizon Convention Center, Amsterdam

@@ -3,7 +3,7 @@ import { Section, SectionCard, SectionContent, SectionTitle } from "./ui/section
 
 export const HeroSection = () => (
     <Section className="mt-15 sm:mt-15">
-        <SectionCard variant="accent" className="relative py-22.5">
+        <SectionCard variant="accent" className="relative overflow-hidden py-22.5">
             <div className="flex flex-col justify-between gap-2 text-[22px] font-bold xl:flex-row">
                 <p>OCTOBER 15-17, 2052</p>
                 <p>Horizon Convention Center, TechCity, Utopolis</p>
@@ -17,7 +17,7 @@ export const HeroSection = () => (
             <Button link variant="primary" className="mt-27.5">
                 Early bird tickets
             </Button>
-            <HeroIllustration className="absolute right-30 bottom-12.5" />
+            <HeroIllustration className="absolute -right-15 -bottom-15 xl:right-30 xl:bottom-12.5" />
         </SectionCard>
     </Section>
 );

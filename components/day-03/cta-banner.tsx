@@ -37,13 +37,13 @@ export const CTABanner = () => (
                 innovation.
             </SectionSubTitle>
         </SectionHeader>
-        <SectionCard className="relative mt-15 overflow-hidden p-24" variant="accent">
+        <SectionCard className="relative mt-15 overflow-hidden p-12 xl:p-24" variant="accent">
             <h4 className="text-[20px]">Early Bird Pricing Ends In:</h4>
             <TimerDisplay time="12:05:30" />
-            <CTAIllustration className="absolute right-0 bottom-0" />
+            <CTAIllustration className="absolute right-0 -bottom-5 h-60 lg:bottom-0 lg:h-80" />
         </SectionCard>
         <h3 className="mt-25 text-[50px] font-bold">Ticket Options</h3>
-        <div className="grid grid-cols-2 gap-5 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3">
             {Tickets.map((ticket) => (
                 <SectionCard
                     key={ticket.label}
@@ -72,9 +72,9 @@ function TimerDisplay({ time }: { time: string }) {
     return (
         <div className="relative z-1 flex items-end gap-4">
             <TimeUnit value={days} label="DAYS" />
-            <p className="mb-6 text-[200px] leading-none">:</p>
+            <p className="mb-6 text-[100px] leading-none lg:text-[200px]">:</p>
             <TimeUnit value={hours} label="HOURS" />
-            <p className="mb-6 text-[200px] leading-none">:</p>
+            <p className="mb-6 text-[100px] leading-none lg:text-[200px]">:</p>
             <TimeUnit value={minutes} label="MINUTES" />
         </div>
     );
@@ -82,20 +82,13 @@ function TimerDisplay({ time }: { time: string }) {
 
 const TimeUnit = ({ value, label }: { value: string; label: string }) => (
     <div className="flex flex-col items-center">
-        <p className="text-[200px] leading-none">{value}</p>
+        <p className="text-[100px] leading-none lg:text-[200px]">{value}</p>
         <p className="mt-2 text-sm tracking-widest">{label}</p>
     </div>
 );
 
 const CTAIllustration = ({ className }: { className?: string }) => (
-    <svg
-        width="364"
-        height="321"
-        viewBox="0 0 364 321"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={className}
-    >
+    <svg viewBox="0 0 364 321" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <path
             fillRule="evenodd"
             clipRule="evenodd"
