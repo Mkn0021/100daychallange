@@ -23,11 +23,7 @@ export const metadata: Metadata = {
 export default function Day02() {
     return (
         <div
-            className={cn(
-                styles.root,
-                font.className,
-                "flex flex-col items-center justify-center gap-2"
-            )}
+            className={cn(styles.root, font.className, "flex flex-col items-center justify-center")}
         >
             <HeroSection />
             <WhySection />

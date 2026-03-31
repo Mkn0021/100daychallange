@@ -5,7 +5,7 @@ import { Section, SectionContent } from "./ui/section";
 
 export const Footer = () => (
     <Section as="footer" className="px-2 sm:px-8 lg:px-25">
-        <SectionContent className="bg-accent mb-2 grid grid-cols-1 gap-7 rounded-[20px] p-8 pt-17.5 pb-7.5 sm:grid-cols-6 sm:gap-0 sm:rounded-[40px] sm:px-12.5 lg:mb-25">
+        <SectionContent className="bg-accent mt-0 mb-25 grid grid-cols-1 gap-7 rounded-[20px] p-8 pt-17.5 pb-7.5 sm:grid-cols-6 sm:gap-0 sm:rounded-[40px] sm:px-12.5">
             <div className="max-w-84 sm:col-span-4 lg:col-span-2">
                 <Logo className="h-10 w-auto text-white" />
                 <p className="mt-7.5 text-left text-[16px] text-(--dark-grey)">

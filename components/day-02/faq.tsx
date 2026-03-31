@@ -91,7 +91,7 @@ const FAQItem = ({
             <h3 className="text-accent text-left text-[20px] font-medium">{question}</h3>
         </div>
         {isOpen && (
-            <p className="text-secondary mt-4 text-left text-[16px] leading-relaxed">{answer}</p>
+            <p className="text-accent mt-4 text-left text-[14px] leading-relaxed">{answer}</p>
         )}
     </button>
 );
