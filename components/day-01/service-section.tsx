@@ -90,18 +90,6 @@ interface CardProps {
     className?: string;
 }
 
-const CardTitle = ({ variant, children }: CardProps) => (
-    <SectionTitle
-        as="h3"
-        className={cn(
-            "text-left text-[26px] sm:text-[30px]",
-            variant === "secondary" ? "bg-primary" : "bg-secondary"
-        )}
-    >
-        {children}
-    </SectionTitle>
-);
-
 const CardContent = ({
     variant,
     children,

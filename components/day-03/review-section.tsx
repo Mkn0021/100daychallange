@@ -57,7 +57,7 @@ export const ReviewSection = () => (
                     </h4>
 
                     <CardSubtitle className="mt-6 text-[14px] md:text-[16px]">
-                        "{review.quote}"
+                        &ldquo;{review.quote}&rdquo;
                     </CardSubtitle>
 
                     <div className="mt-12.5 flex items-center gap-5 md:gap-10">
