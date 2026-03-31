@@ -1,22 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-const days = [
-    {
-        day: "01",
-        title: "Positivus",
-        description: "Digital Marketing Agency",
-        href: "/day-01",
-        cover: "/day-01.png",
-    },
-    {
-        day: "02",
-        title: "Habitus",
-        description: "Habit Tracking App",
-        href: "/day-02",
-        cover: "/day-02/day-02.png",
-    },
-];
+import { Days } from "@/lib/constant";
 
 export default function Home() {
     return (
@@ -42,7 +26,7 @@ export default function Home() {
                 </header>
 
                 <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    {days.map(({ day, title, description, href, cover }) => (
+                    {Days.map(({ day, title, description, href, cover }) => (
                         <Link
                             key={day}
                             href={href}
