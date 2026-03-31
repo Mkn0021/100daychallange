@@ -1,5 +1,33 @@
+import { Button } from "./ui/button";
 import { Section, SectionCard, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
 
+type Ticket = {
+    label: string;
+    description: string;
+    variant: "primary" | "secondary" | "accent" | "outline";
+    price: string;
+};
+
+const Tickets: Ticket[] = [
+    {
+        label: "Early Bird Pass",
+        description: "Limited time offer!",
+        variant: "primary",
+        price: "€299",
+    },
+    {
+        label: "STANDARD PASS",
+        description: "",
+        variant: "outline",
+        price: "€399",
+    },
+    {
+        label: "VIP EXPERIENCE",
+        description: "Includes exclusive speaker meetups & front-row seating",
+        variant: "outline",
+        price: "€699",
+    },
+];
 export const CTABanner = () => (
     <Section className="mt-50 sm:mt-50">
         <SectionHeader className="items-start">
@@ -14,6 +42,27 @@ export const CTABanner = () => (
             <TimerDisplay time="12:05:30" />
             <CTAIllustration className="absolute right-0 bottom-0" />
         </SectionCard>
+        <h3 className="mt-25 text-[50px] font-bold">Ticket Options</h3>
+        <div className="grid grid-cols-3 gap-5">
+            {Tickets.map((ticket) => (
+                <SectionCard
+                    key={ticket.label}
+                    variant={ticket.variant}
+                    className="mt-15 flex flex-col justify-between"
+                >
+                    <h4 className="text-[26px] font-bold uppercase">{ticket.label}</h4>
+                    <p className="text-[20px]">{ticket.description}</p>
+                    <p className="mt-25 text-[50px] font-bold">{ticket.price}</p>
+                    <Button
+                        className="mt-10 text-nowrap"
+                        variant={ticket.variant == "primary" ? "secondary" : "primary"}
+                        link
+                    >
+                        Get your ticket
+                    </Button>
+                </SectionCard>
+            ))}
+        </div>
     </Section>
 );
 
