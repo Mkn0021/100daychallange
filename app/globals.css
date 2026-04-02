@@ -2,6 +2,7 @@
 
 @theme inline {
     --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
     --color-secondary: var(--secondary);
     --color-accent: var(--accent);
     --color-background: var(--background);

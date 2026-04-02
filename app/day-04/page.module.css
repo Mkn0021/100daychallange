@@ -1,0 +1,16 @@
+.root {
+    --font-sans: "Inter", sans-serif;
+    --font-dm: "DM Sans", sans-serif;
+    --primary: #18181b;
+    --primary-foreground: #fafafa;
+    --border: #e4e4e7;
+    --secondary: #f8f4e7;
+    --background: #f8f8f8;
+    --foreground: #09090b;
+    --muted-foreground: #71717a;
+    --muted: #f4f4f5;
+
+    background: #fff;
+    color: var(--muted-foreground);
+    font-family: var(--font-sans);
+}
