@@ -75,7 +75,7 @@ export const HeroSection = () => (
                     className="absolute top-0 bottom-0 left-0 hidden lg:block"
                 />
             </div>
-            <HeroImage className="h-[140%] w-[140%] lg:col-span-5 lg:mt-15.75 lg:h-auto lg:w-full" />
+            <HeroImage className="h-[200%] w-[200%] md:h-[140%] md:w-[140%] lg:col-span-5 lg:mt-15.75 lg:h-auto lg:w-full" />
         </Section>
     </Container>
 );

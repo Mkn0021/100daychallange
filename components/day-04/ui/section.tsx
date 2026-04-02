@@ -14,7 +14,7 @@ export const Section = ({
 }) => {
     const Component = as || "section";
     return (
-        <Component className={cn("mx-auto w-full max-w-6xl px-8 xl:px-0", className)}>
+        <Component className={cn("mx-auto w-full max-w-6xl px-7.5 xl:px-0", className)}>
             {children}
         </Component>
     );
