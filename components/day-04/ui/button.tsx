@@ -14,7 +14,7 @@ export const Button = ({
         <button
             {...props}
             className={cn(
-                "flex h-9 w-fit items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm leading-6 font-medium transition-colors duration-300",
+                "flex w-fit items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm leading-6 font-medium transition-colors duration-300",
                 variant === "primary" && "bg-primary text-primary-foreground",
                 variant === "secondary" && "bg-secondary hover:bg-secondary/80",
                 variant === "outline" &&

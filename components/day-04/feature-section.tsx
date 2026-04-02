@@ -6,9 +6,9 @@ import { DashedBorder } from "./hero-section";
 export const FeatureSection = () => (
     <div className="to-secondary/80 w-full bg-linear-to-b from-white">
         <Section>
-            <SectionHeader className="mt-25 items-start gap-8 md:flex-row md:items-center md:justify-center">
+            <SectionHeader className="mt-25 items-start gap-8 lg:flex-row lg:items-center lg:justify-center">
                 <SectionTitle variant="secondary">
-                    Made for modern <br /> product teams
+                    Made for modern <br className="hidden lg:block" /> product teams
                 </SectionTitle>
                 <SectionSubTitle variant="secondary">
                     Mainline is built on the habits that make the best product teams successful:
@@ -44,20 +44,20 @@ export const FeatureSection = () => (
 );
 
 const FeatureCard = ({ children }: { children: React.ReactNode }) => (
-    <div className="relative block w-full bg-white">{children}</div>
+    <div className="relative flex h-100 w-full flex-col bg-white">{children}</div>
 );
 
 const CardSkeleton = ({ children }: { children?: React.ReactNode }) => (
-    <div className="mt-12 ml-12 min-h-75 flex-1 rounded-tl-2xl border-t border-l border-(--border) bg-neutral-50 mask-b-from-50%">
+    <div className="mt-12 ml-12 flex-1 rounded-tl-2xl border-t border-l border-(--border) bg-neutral-50 mask-b-from-50%">
         {children}
     </div>
 );
 
 const CardTitle = ({ children, href = "#" }: { children: React.ReactNode; href?: string }) => (
     <div className="flex justify-between p-6">
-        <h2 className="text-foreground text-[24px] leading-[120%] font-bold tracking-[-2%]">
+        <h3 className="text-foreground text-[24px] leading-[120%] font-bold tracking-[-2%]">
             {children}
-        </h2>
+        </h3>
         <Link
             href={href}
             className="flex size-14.5 shrink-0 items-center justify-center rounded-full border border-(--border) transition-colors duration-300 hover:bg-(--muted)"

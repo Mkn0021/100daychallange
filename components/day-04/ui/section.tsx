@@ -14,7 +14,7 @@ export const Section = ({
 }) => {
     const Component = as || "section";
     return (
-        <Component className={cn("mx-auto w-full max-w-6xl px-7.5 xl:px-0", className)}>
+        <Component className={cn("mx-auto w-full max-w-6xl px-5 md:px-11.25 xl:px-0", className)}>
             {children}
         </Component>
     );
@@ -38,8 +38,8 @@ export const SectionTitle = ({
         <Component
             className={cn(
                 "text-foreground font-semibold tracking-tight",
-                variant === "primary" && "text-[56px] leading-[98%]",
-                variant === "secondary" && "text-[40px] leading-[110%]",
+                variant === "primary" && "text-[33px] leading-[98%] md:text-[56px]",
+                variant === "secondary" && "text-[24px] leading-[110%] md:text-[40px]",
                 className
             )}
             style={{ fontFamily: "var(--font-dm)" }}
@@ -58,7 +58,7 @@ export const SectionSubTitle = ({
 }) => (
     <p
         className={cn(
-            variant === "primary" && "max-w-xl text-4xl leading-none",
+            variant === "primary" && "max-w-xl text-[27px] leading-none md:text-4xl",
             variant === "secondary" && "max-w-md text-[17px] leading-[140%] font-medium",
             className
         )}

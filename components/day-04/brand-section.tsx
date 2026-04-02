@@ -4,7 +4,7 @@ import { Section, SectionTitle } from "./ui/section";
 export const BrandSection = () => (
     <Section>
         <SectionTitle
-            className="mx-auto mt-16.75 max-w-4xl text-center text-[27px] leading-[120%] font-bold"
+            className="mx-auto mt-16.75 max-w-4xl text-center text-[20px] leading-[120%] font-bold md:text-[27px]"
             as="h3"
         >
             Powering the world’s best product teams.
@@ -29,7 +29,7 @@ export const BrandSection = () => (
         </div>
         <div className="relative mt-25 flex h-9 items-center justify-center">
             <DashedBorder variant="vertical" className="absolute inset-x-0 bottom-1/2" />
-            <p className="relative z-1 bg-white px-2 text-[13px] uppercase">
+            <p className="relative z-1 hidden bg-white px-2 text-[13px] uppercase md:block">
                 measure twice. cut once.
             </p>
         </div>

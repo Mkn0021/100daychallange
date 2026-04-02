@@ -36,7 +36,7 @@ const Features = [
 
 export const HeroSection = () => (
     <Container>
-        <Section className="grid grid-cols-1 gap-10 py-15.75 lg:grid-cols-5 lg:gap-0">
+        <Section className="grid grid-cols-1 gap-10 py-15.75 md:px-7.5 lg:grid-cols-5 lg:gap-0">
             <div className="lg:col-span-3">
                 <SectionHeader className="items-start gap-5.5">
                     <SectionTitle>Mainline your product.</SectionTitle>
@@ -81,7 +81,7 @@ export const HeroSection = () => (
 );
 
 const Container = ({ children }: { children: React.ReactNode }) => (
-    <div className="h-full w-full max-w-screen overflow-hidden p-3.75">
+    <div className="h-full w-full max-w-screen overflow-hidden p-2.5 md:p-3.75">
         <div className="from-secondary via-background to-background/0 rounded-t-[36px] bg-linear-to-b">
             {children}
         </div>
