@@ -18,7 +18,7 @@ export const Button = ({
                 variant === "primary" && "bg-primary text-primary-foreground",
                 variant === "secondary" && "bg-secondary hover:bg-secondary/80",
                 variant === "outline" &&
-                    "border border-(--border) bg-white shadow-sm hover:bg-white/80",
+                    "text-foreground border border-(--border) bg-white shadow-sm hover:bg-white/80",
                 className
             )}
             data-variant={variant}

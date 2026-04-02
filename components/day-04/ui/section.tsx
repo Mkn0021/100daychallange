@@ -21,7 +21,9 @@ export const Section = ({
 };
 
 export const SectionHeader = ({ className, children }: SectionProps) => (
-    <div className={cn("flex flex-col items-center justify-between", className)}>{children}</div>
+    <div className={cn("flex flex-col items-center justify-between gap-4.5", className)}>
+        {children}
+    </div>
 );
 
 export const SectionTitle = ({

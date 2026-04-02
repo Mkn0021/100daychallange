@@ -28,7 +28,7 @@ const reviews = [
 export const ReviewSection = () => {
     return (
         <Section className="relative mt-22.5 pb-17.5">
-            <SectionHeader className="items-start gap-4.5">
+            <SectionHeader className="items-start">
                 <SectionTitle variant="secondary">Trusted by product builders</SectionTitle>
                 <SectionSubTitle variant="secondary">
                     Mainline is built on the habits that make the best product teams successful:

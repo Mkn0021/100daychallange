@@ -116,3 +116,24 @@ export const ArrowIcon2 = ({ className }: { className?: string }) => (
         />
     </svg>
 );
+
+export const SwitchIcon = () => (
+    <svg width="46" height="40" viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="0.333496" width="36" height="20" rx="10" fill="currentColor" />
+        <g filter="url(#filter0_dd_26115_1049)">
+            <circle cx="26" cy="10" r="8" fill="white" />
+        </g>
+    </svg>
+);
+
+export const CheckIcon = () => (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M15 4.5L6.75 12.75L3 9"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
