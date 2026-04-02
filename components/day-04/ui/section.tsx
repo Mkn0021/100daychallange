@@ -28,14 +28,18 @@ export const SectionTitle = ({
     className,
     children,
     as,
+    variant = "primary",
 }: SectionProps & {
     as?: "h2" | "h3" | "h4";
+    variant?: "primary" | "secondary";
 }) => {
     const Component = as || "h2";
     return (
         <Component
             className={cn(
-                "text-foreground text-[56px] leading-[98%] font-semibold tracking-tight",
+                "text-foreground font-semibold tracking-tight",
+                variant === "primary" && "text-[56px] leading-[98%]",
+                variant === "secondary" && "text-[40px] leading-[110%]",
                 className
             )}
             style={{ fontFamily: "var(--font-dm)" }}
@@ -45,27 +49,20 @@ export const SectionTitle = ({
     );
 };
 
-export const SectionSubTitle = ({ className, children }: SectionProps) => (
-    <p className={cn("text-4xl leading-none", className)}>{children}</p>
-);
-
-export const Title = ({
+export const SectionSubTitle = ({
     className,
     children,
-    as,
+    variant = "primary",
 }: SectionProps & {
-    as?: "h2" | "h3" | "h4";
-}) => {
-    const Component = as || "h2";
-    return (
-        <Component
-            className={cn(
-                "text-foreground text-[27px] leading-[120%] font-bold tracking-tight",
-                className
-            )}
-            style={{ fontFamily: "var(--font-dm)" }}
-        >
-            {children}
-        </Component>
-    );
-};
+    variant?: "primary" | "secondary";
+}) => (
+    <p
+        className={cn(
+            variant === "primary" && "max-w-xl text-4xl leading-none",
+            variant === "secondary" && "max-w-md text-[17px] leading-[140%] font-medium",
+            className
+        )}
+    >
+        {children}
+    </p>
+);
