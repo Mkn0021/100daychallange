@@ -18,7 +18,8 @@ export default function Day03() {
                 "flex flex-col items-center justify-center"
             )}
         >
-            hello
+            <HeroSection />
+            <BrandSection />
         </div>
     );
 }
