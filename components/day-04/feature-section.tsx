@@ -62,7 +62,7 @@ const CardTitle = ({ children, href = "#" }: { children: React.ReactNode; href?:
             href={href}
             className="flex size-14.5 shrink-0 items-center justify-center rounded-full border border-(--border) transition-colors duration-300 hover:bg-(--muted)"
         >
-            <ArrowIcon2 />
+            <ArrowIcon2 className="text-foreground h-9" />
         </Link>
     </div>
 );

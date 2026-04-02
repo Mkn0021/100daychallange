@@ -105,11 +105,11 @@ export const ProgressIcon = () => (
     </svg>
 );
 
-export const ArrowIcon2 = () => (
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const ArrowIcon2 = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <path
             d="M13.5 27L22.5 18L13.5 9"
-            stroke="#09090B"
+            stroke="currentColor"
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"

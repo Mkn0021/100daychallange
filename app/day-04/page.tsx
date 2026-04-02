@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/day-04/hero-section";
 import { BrandSection } from "@/components/day-04/brand-section";
 import { FeatureSection } from "@/components/day-04/feature-section";
 import { BentoGrid } from "@/components/day-04/bento-grid";
+import { ReviewSection } from "@/components/day-04/review-section";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm" });
@@ -24,6 +25,7 @@ export default function Day03() {
             <BrandSection />
             <FeatureSection />
             <BentoGrid />
+            <ReviewSection />
         </div>
     );
 }
