@@ -4,9 +4,9 @@ import { ArrowIcon2 } from "./ui/icons";
 import { DashedBorder } from "./hero-section";
 
 export const FeatureSection = () => (
-    <div className="to-secondary/80 w-full bg-linear-to-b from-white pb-40">
+    <div className="to-secondary/80 w-full bg-linear-to-b from-white">
         <Section>
-            <SectionHeader className="mt-25 flex-row justify-center gap-8">
+            <SectionHeader className="mt-25 items-start gap-8 md:flex-row md:items-center md:justify-center">
                 <SectionTitle variant="secondary">
                     Made for modern <br /> product teams
                 </SectionTitle>
@@ -15,17 +15,25 @@ export const FeatureSection = () => (
                     staying focused, moving quickly, and always aiming for high-quality work.
                 </SectionSubTitle>
             </SectionHeader>
-            <div className="mt-22.5 grid grid-cols-3 overflow-hidden rounded-3xl border border-(--border)">
+            <div className="mt-22.5 grid grid-cols-1 overflow-hidden rounded-3xl border border-(--border) lg:grid-cols-3">
                 <FeatureCard>
                     <CardSkeleton></CardSkeleton>
                     <CardTitle>Purpose-built for product development</CardTitle>
-                    <DashedBorder variant="horizontal" className="absolute inset-y-0 right-0" />
                 </FeatureCard>
+                <DashedBorder variant="vertical" className="block lg:hidden" />
                 <FeatureCard>
+                    <DashedBorder
+                        variant="horizontal"
+                        className="absolute inset-y-0 left-0 hidden lg:block"
+                    />
                     <CardSkeleton></CardSkeleton>
                     <CardTitle>Manage projects end-to-end</CardTitle>
-                    <DashedBorder variant="horizontal" className="absolute inset-y-0 right-0" />
+                    <DashedBorder
+                        variant="horizontal"
+                        className="absolute inset-y-0 right-0 hidden lg:block"
+                    />
                 </FeatureCard>
+                <DashedBorder variant="vertical" className="block lg:hidden" />
                 <FeatureCard>
                     <CardSkeleton></CardSkeleton>
                     <CardTitle>Build momentum and healthy habits</CardTitle>
