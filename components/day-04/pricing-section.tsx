@@ -56,7 +56,7 @@ export const PricingSection = () => (
                 enhanced security controls, and additional features.
             </SectionSubTitle>
         </SectionHeader>
-        <div className="mx-auto mt-18 grid max-w-5xl grid-cols-3 gap-5.5">
+        <div className="mx-auto mt-18 grid max-w-5xl grid-cols-1 gap-5.5 lg:grid-cols-3">
             {plans.map((plan) => (
                 <Card
                     key={plan.name}

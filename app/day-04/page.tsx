@@ -8,6 +8,7 @@ import { FeatureSection } from "@/components/day-04/feature-section";
 import { BentoGrid } from "@/components/day-04/bento-grid";
 import { ReviewSection } from "@/components/day-04/review-section";
 import { PricingSection } from "@/components/day-04/pricing-section";
+import { FaqSection } from "@/components/day-04/faq-section";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm" });
@@ -28,6 +29,7 @@ export default function Day03() {
             <BentoGrid />
             <ReviewSection />
             <PricingSection />
+            <FaqSection />
         </div>
     );
 }

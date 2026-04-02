@@ -7,7 +7,7 @@ export const BrandSection = () => (
             className="mx-auto mt-16.75 max-w-4xl text-center text-[20px] leading-[120%] font-bold md:text-[27px]"
             as="h3"
         >
-            Powering the world’s best product teams.
+            Powering the world’s best product teams.{" "}
             <span className="text-(--muted-foreground) md:block">
                 From next-gen startups to established enterprises.
             </span>

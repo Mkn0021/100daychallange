@@ -80,9 +80,20 @@ export const HeroSection = () => (
     </Container>
 );
 
-const Container = ({ children }: { children: React.ReactNode }) => (
+export const Container = ({
+    className,
+    children,
+}: {
+    className?: string;
+    children: React.ReactNode;
+}) => (
     <div className="h-full w-full max-w-screen overflow-hidden p-2.5 md:p-3.75">
-        <div className="from-secondary via-background to-background/0 rounded-t-[36px] bg-linear-to-b">
+        <div
+            className={cn(
+                "from-secondary via-background to-background/0 rounded-t-[36px] bg-linear-to-b",
+                className
+            )}
+        >
             {children}
         </div>
     </div>
