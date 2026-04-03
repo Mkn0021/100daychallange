@@ -73,8 +73,8 @@ const items = [
 
 export const ReviewSection = () => {
     return (
-        <Section className="relative mt-22.5 pb-17.5">
-            <SectionHeader className="items-start">
+        <Section className="relative py-12.5 overflow-hidden">
+            <SectionHeader className="items-start py-6.25 gap-5">
                 <SectionTitle variant="secondary">Trusted by product builders</SectionTitle>
                 <SectionSubTitle variant="secondary">
                     Mainline is built on the habits that make the best product teams successful:
@@ -85,7 +85,7 @@ export const ReviewSection = () => {
                 </Button>
             </SectionHeader>
 
-            <div className="relative mt-8 -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] md:mt-12 lg:mt-20">
+            <div className="mt-6.25 relative -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] py-6.25">
                 <Carousel
                     opts={{
                         align: "start",
@@ -127,9 +127,9 @@ export const ReviewSection = () => {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <div className="mt-8 flex gap-3">
-                        <CarouselPrevious className="bg-muted hover:bg-muted/80 [&>svg]:text-muted-foreground static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8!" />
-                        <CarouselNext className="bg-muted hover:bg-muted/80 [&>svg]:text-muted-foreground static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8!" />
+                    <div className="flex gap-4 mt-6.25">
+                        <CarouselPrevious className="bg-muted hover:bg-muted/80 [&>svg]:text-muted-foreground static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-8!" />
+                        <CarouselNext className="bg-muted hover:bg-muted/80 [&>svg]:text-muted-foreground static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-8!" />
                     </div>
                 </Carousel>
             </div>

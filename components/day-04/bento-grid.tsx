@@ -53,12 +53,12 @@ const bentoCards = [
 ];
 
 export const BentoGrid = () => (
-    <div className="bg-secondary/80 w-full py-40">
+    <div className="bg-secondary/80 w-full py-12.5">
         <Section>
-            <SectionTitle className="mx-auto max-w-4xl text-center">
+            <SectionTitle className="mx-auto max-w-4xl py-6.25 text-center">
                 Mainline your resource <br className="hidden lg:block" /> allocation and execution
             </SectionTitle>
-            <div className="relative mt-22.5 grid lg:grid-cols-6">
+            <div className="relative my-12.5 grid lg:grid-cols-6">
                 {bentoCards.map((card) => (
                     <BentoCard key={card.id} className={card.className}>
                         {card.borders.map((border, borderIndex) => (
