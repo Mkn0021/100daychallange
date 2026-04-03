@@ -14,14 +14,16 @@ export const Section = ({
 }) => {
     const Component = as || "section";
     return (
-        <Component className={cn("mx-auto w-full max-w-6xl px-5 md:px-11.25 xl:px-0", className)}>
+        <Component
+            className={cn("mx-auto w-full max-w-6xl px-5 py-12.5 md:px-10 xl:px-0", className)}
+        >
             {children}
         </Component>
     );
 };
 
 export const SectionHeader = ({ className, children }: SectionProps) => (
-    <div className={cn("flex flex-col items-center justify-between gap-4.5", className)}>
+    <div className={cn("flex flex-col items-center justify-between gap-5 py-6.25", className)}>
         {children}
     </div>
 );

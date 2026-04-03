@@ -36,11 +36,8 @@ const Features = [
 
 export const HeroSection = () => (
     <Background className="pt-25">
-        <Section
-            as="div"
-            className="grid grid-cols-1 py-12.5 max-lg:gap-10 md:px-7.5 lg:grid-cols-5"
-        >
-            <SectionHeader className="items-start gap-5 lg:col-span-3">
+        <Section as="div" className="grid grid-cols-1 max-lg:gap-10 md:px-7.5 lg:grid-cols-5">
+            <SectionHeader className="items-start py-0 lg:col-span-3">
                 <SectionTitle as="h1">Mainline your product.</SectionTitle>
                 <SectionSubTitle>
                     Mainline is the fit-for-purpose tool for planning and building modern software

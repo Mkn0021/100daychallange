@@ -11,6 +11,7 @@ import {
     CarouselPrevious,
 } from "../ui/carousel";
 import { Card, CardContent } from "../ui/card";
+import { cn } from "@/lib/utils";
 
 const items = [
     {
@@ -73,8 +74,8 @@ const items = [
 
 export const ReviewSection = () => {
     return (
-        <Section className="relative py-12.5 overflow-hidden">
-            <SectionHeader className="items-start py-6.25 gap-5">
+        <Section className="relative">
+            <SectionHeader className="items-start">
                 <SectionTitle variant="secondary">Trusted by product builders</SectionTitle>
                 <SectionSubTitle variant="secondary">
                     Mainline is built on the habits that make the best product teams successful:
@@ -85,7 +86,12 @@ export const ReviewSection = () => {
                 </Button>
             </SectionHeader>
 
-            <div className="mt-6.25 relative -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] py-6.25">
+            <div
+                className={cn(
+                    "relative mt-6.25 py-6.25",
+                    "-mr-[max(1.25rem,calc((100vw-72rem)/2+1.25rem))] md:-mr-[max(2.5rem,calc((100vw-72rem)/2+2.5rem))] xl:-mr-[calc((100vw-72rem)/2)]"
+                )}
+            >
                 <Carousel
                     opts={{
                         align: "start",
@@ -127,7 +133,7 @@ export const ReviewSection = () => {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <div className="flex gap-4 mt-6.25">
+                    <div className="mt-6.25 flex gap-4">
                         <CarouselPrevious className="bg-muted hover:bg-muted/80 [&>svg]:text-muted-foreground static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-8!" />
                         <CarouselNext className="bg-muted hover:bg-muted/80 [&>svg]:text-muted-foreground static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-8!" />
                     </div>

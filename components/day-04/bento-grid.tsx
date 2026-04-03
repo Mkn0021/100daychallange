@@ -53,7 +53,7 @@ const bentoCards = [
 ];
 
 export const BentoGrid = () => (
-    <div className="bg-secondary/80 w-full py-12.5">
+    <div className="bg-secondary/80 w-full">
         <Section>
             <SectionTitle className="mx-auto max-w-4xl py-6.25 text-center">
                 Mainline your resource <br className="hidden lg:block" /> allocation and execution

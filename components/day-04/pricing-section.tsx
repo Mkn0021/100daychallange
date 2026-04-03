@@ -14,7 +14,7 @@ const plans = [
     {
         name: "Startup",
         price: "$8 per user/month",
-        variant: "primary" as const,
+        variant: "default" as const,
         description: (
             <p className="text-foreground flex text-[13px] font-medium">
                 <SwitchIcon /> Billed annually
@@ -48,7 +48,7 @@ const plans = [
     },
 ];
 export const PricingSection = () => (
-    <Section className="mt-19 mb-34">
+    <Section>
         <SectionHeader>
             <SectionTitle>Pricing</SectionTitle>
             <SectionSubTitle variant="secondary" className="max-w-xl text-center">
@@ -56,17 +56,17 @@ export const PricingSection = () => (
                 enhanced security controls, and additional features.
             </SectionSubTitle>
         </SectionHeader>
-        <div className="mx-auto mt-18 grid max-w-5xl grid-cols-1 gap-5.5 lg:grid-cols-3">
+        <div className="mx-auto my-12.5 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {plans.map((plan) => (
                 <Card
                     key={plan.name}
-                    className={plan.variant === "primary" ? "border-foreground border-4" : ""}
+                    className={plan.variant === "default" ? "border-foreground border-4" : ""}
                 >
                     <CardHeader title={plan.name} price={plan.price} />
                     {plan.description}
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-4">
                         {plan.features.map((feature, index) => (
-                            <p className="flex gap-1.5 text-[13px] leading-[140%]" key={index}>
+                            <p className="flex gap-2 text-sm leading-tight" key={index}>
                                 <CheckIcon /> {feature}
                             </p>
                         ))}
@@ -83,7 +83,7 @@ export const PricingSection = () => (
 const Card = ({ className, children }: { className?: string; children: React.ReactNode }) => (
     <div
         className={cn(
-            "flex h-fit flex-col gap-7.5 rounded-xl border-2 border-(--border) px-6 py-5",
+            "border-border flex h-fit flex-col gap-8 rounded-xl border-2 px-6 py-5 md:h-full lg:h-fit",
             className
         )}
     >

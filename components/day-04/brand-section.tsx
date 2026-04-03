@@ -26,7 +26,7 @@ const logoBrands = [
 ];
 
 export const BrandSection = () => (
-    <Section className="relative py-12.5">
+    <Section className="relative">
         <h2
             className="text-foreground mx-auto max-w-4xl text-center text-xl leading-tight font-bold md:text-[27px]"
             style={{ fontFamily: "var(--font-dm)" }}

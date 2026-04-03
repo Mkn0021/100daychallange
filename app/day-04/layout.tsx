@@ -16,7 +16,7 @@ export default function Day04Layout({
         <div className={cn(styles.root, inter.variable, dmSans.variable, "antialiased")}>
             <Navbar />
             <main>{children}</main>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

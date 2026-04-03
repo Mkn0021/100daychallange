@@ -13,7 +13,7 @@ const overrides: {
         outline: "bg-neutral-50 text-foreground shadow-sm hover:bg-white/80",
     },
     size: {
-        default: "px-4",
+        default: "px-4 w-fit",
     },
 };
 

@@ -20,9 +20,9 @@ const features = [
 ];
 
 export const FeatureSection = () => (
-    <section className="to-secondary/80 w-full bg-linear-to-b from-white py-12.5">
+    <section className="to-secondary/80 w-full bg-linear-to-b from-white">
         <Section as="div">
-            <SectionHeader className="items-start gap-8 py-6.25 lg:flex-row lg:items-center lg:justify-center">
+            <SectionHeader className="items-start gap-8 lg:flex-row lg:items-center lg:justify-center">
                 <SectionTitle variant="secondary">
                     Made for modern <br className="hidden lg:block" /> product teams
                 </SectionTitle>
