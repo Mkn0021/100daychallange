@@ -9,11 +9,12 @@ import { BentoGrid } from "@/components/day-04/bento-grid";
 import { ReviewSection } from "@/components/day-04/review-section";
 import { PricingSection } from "@/components/day-04/pricing-section";
 import { FaqSection } from "@/components/day-04/faq-section";
+import { Footer } from "@/components/day-04/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm" });
 
-export default function Day03() {
+export default function Day04() {
     return (
         <div
             className={cn(
@@ -30,6 +31,7 @@ export default function Day03() {
             <ReviewSection />
             <PricingSection />
             <FaqSection />
+            <Footer />
         </div>
     );
 }
