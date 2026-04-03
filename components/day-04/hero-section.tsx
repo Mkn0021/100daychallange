@@ -66,9 +66,9 @@ export const HeroSection = () => (
                         <li key={index} className="flex items-center gap-5">
                             <Icon />
                             <div className="flex flex-col items-start">
-                                <h3 className="text-foreground text-base font-semibold">
+                                <h2 className="text-foreground text-base font-semibold">
                                     {feature.title}
-                                </h3>
+                                </h2>
                                 <p className="text-muted-foreground text-sm">
                                     {feature.description}
                                 </p>

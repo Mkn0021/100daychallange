@@ -1,5 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
-import { Container } from "./hero-section";
+import { Background } from "./hero-section";
 import { Section, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
 
 const categories = [
@@ -49,8 +49,8 @@ const categories = [
 ];
 
 export const FaqSection = () => (
-    <Container className="rounded-none rounded-b-[36px] bg-linear-to-t">
-        <Section className="grid grid-cols-2 py-28.25">
+    <Background className="rounded-none rounded-b-[36px] bg-linear-to-t">
+        <Section className="grid grid-cols-2 py-28.25 md:px-7.5">
             <SectionHeader className="items-start gap-5.5">
                 <SectionTitle variant="secondary">Got Questions? </SectionTitle>
                 <SectionSubTitle variant="secondary" className="mb-auto justify-start text-[15px]">
@@ -78,5 +78,5 @@ export const FaqSection = () => (
                 ))}
             </div>
         </Section>
-    </Container>
+    </Background>
 );

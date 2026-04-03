@@ -99,7 +99,7 @@ export const ReviewSection = () => {
                                 key={index}
                                 className="grow basis-4/5 sm:basis-3/5 md:basis-2/5 lg:basis-[28%]"
                             >
-                                <Card className="bg-muted h-full overflow-hidden rounded-[9px] border-none ring-0 p-0">
+                                <Card className="bg-muted h-full overflow-hidden rounded-[9px] border-none p-0 ring-0">
                                     <CardContent className="flex h-full flex-col p-0">
                                         <div className="relative h-72 lg:h-82">
                                             <Image
