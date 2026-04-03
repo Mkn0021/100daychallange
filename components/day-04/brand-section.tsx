@@ -8,7 +8,7 @@ export const BrandSection = () => (
             as="h3"
         >
             Powering the world’s best product teams.{" "}
-            <span className="text-(--muted-foreground) md:block">
+            <span className="text-muted-foreground md:block">
                 From next-gen startups to established enterprises.
             </span>
         </SectionTitle>

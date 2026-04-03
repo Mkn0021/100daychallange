@@ -36,7 +36,7 @@ const Features = [
 
 export const HeroSection = () => (
     <Container>
-        <Section className="grid grid-cols-1 gap-10 py-15.75 md:px-7.5 lg:grid-cols-5 lg:gap-0">
+        <Section className="grid grid-cols-1 gap-10 pt-30 pb-15.75 md:px-7.5 lg:grid-cols-5 lg:gap-0 lg:pt-44">
             <div className="lg:col-span-3">
                 <SectionHeader className="items-start gap-5.5">
                     <SectionTitle>Mainline your product.</SectionTitle>
@@ -102,7 +102,7 @@ export const Container = ({
 const HeroImage = ({ className }: { className?: string }) => (
     <div
         className={cn(
-            "relative aspect-video overflow-hidden rounded-none rounded-tl-2xl border border-white/8 bg-(--muted) shadow-[0px_9px_50px_0px_#3C3C301F] lg:rounded-2xl",
+            "bg-muted relative aspect-video overflow-hidden rounded-none rounded-tl-2xl border border-white/8 shadow-[0px_9px_50px_0px_#3C3C301F] lg:rounded-2xl",
             className
         )}
     >
