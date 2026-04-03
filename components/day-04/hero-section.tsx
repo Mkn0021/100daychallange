@@ -35,68 +35,72 @@ const Features = [
 ];
 
 export const HeroSection = () => (
-    <Container>
-        <Section className="grid grid-cols-1 gap-10 pt-30 pb-15.75 md:px-7.5 lg:grid-cols-5 lg:gap-0 lg:pt-44">
-            <div className="lg:col-span-3">
-                <SectionHeader className="items-start gap-5.5">
-                    <SectionTitle>Mainline your product.</SectionTitle>
-                    <SectionSubTitle>
-                        Mainline is the fit-for-purpose tool for planning and building modern
-                        software products.
-                    </SectionSubTitle>
-                </SectionHeader>
-                <div className="mt-11.25 flex flex-col gap-3.75 md:flex-row">
+    <Background className="pt-25">
+        <Section
+            as="div"
+            className="grid grid-cols-1 py-12.5 max-lg:gap-10 md:px-7.5 lg:grid-cols-5"
+        >
+            <SectionHeader className="items-start gap-5 lg:col-span-3">
+                <SectionTitle as="h1">Mainline your product.</SectionTitle>
+                <SectionSubTitle>
+                    Mainline is the fit-for-purpose tool for planning and building modern software
+                    products.
+                </SectionSubTitle>
+
+                <div className="mt-8 flex flex-col gap-4 md:flex-row">
                     <Button>
                         Get Started <ArrowIcon />
                     </Button>
                     <Button variant="outline">
-                        Mainline raises $12M from Roba Ventures <DashedCircleIcon />
+                        Mainline raises $12M from Ventures <DashedCircleIcon />
                     </Button>
                 </div>
-            </div>
+            </SectionHeader>
+
             <DashedBorder variant="vertical" className="block lg:hidden" />
-            <div className="relative flex flex-col justify-between gap-4.5 lg:col-span-2 lg:pl-9">
+
+            <ul className="relative space-y-4 lg:col-span-2 lg:py-5 lg:pl-10">
                 {Features.map((feature, index) => {
                     const Icon = feature.icon;
                     return (
-                        <div key={index} className="flex items-start gap-5">
+                        <li key={index} className="flex items-center gap-5">
                             <Icon />
-                            <div className="flex flex-col items-start gap-0.75">
-                                <h3 className="text-foreground text-[15px] font-semibold">
+                            <div className="flex flex-col items-start">
+                                <h3 className="text-foreground text-base font-semibold">
                                     {feature.title}
                                 </h3>
-                                <p className="text-[13px]">{feature.description}</p>
+                                <p className="text-muted-foreground text-sm">
+                                    {feature.description}
+                                </p>
                             </div>
-                        </div>
+                        </li>
                     );
                 })}
                 <DashedBorder
                     variant="horizontal"
                     className="absolute top-0 bottom-0 left-0 hidden lg:block"
                 />
-            </div>
-            <HeroImage className="h-[200%] w-[200%] md:h-[140%] md:w-[140%] lg:col-span-5 lg:mt-15.75 lg:h-auto lg:w-full" />
+            </ul>
+            <HeroImage className="h-[160%] w-[160%] md:mt-12.5 md:h-[140%] md:w-[140%] lg:col-span-5 lg:mt-25 lg:h-auto lg:w-full" />
         </Section>
-    </Container>
+    </Background>
 );
 
-export const Container = ({
+export const Background = ({
     className,
     children,
 }: {
     className?: string;
     children: React.ReactNode;
 }) => (
-    <div className="h-full w-full max-w-screen overflow-hidden p-2.5 md:p-3.75">
-        <div
-            className={cn(
-                "from-secondary via-background to-background/0 rounded-t-[36px] bg-linear-to-b",
-                className
-            )}
-        >
-            {children}
-        </div>
-    </div>
+    <section
+        className={cn(
+            "from-secondary via-background to-background/0 m-2.5 overflow-hidden rounded-t-[36px] bg-linear-to-b md:m-3.75",
+            className
+        )}
+    >
+        {children}
+    </section>
 );
 
 const HeroImage = ({ className }: { className?: string }) => (

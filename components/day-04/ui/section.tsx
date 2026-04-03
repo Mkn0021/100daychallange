@@ -32,7 +32,7 @@ export const SectionTitle = ({
     as,
     variant = "primary",
 }: SectionProps & {
-    as?: "h2" | "h3" | "h4";
+    as?: "h1" | "h2" | "h3" | "h4";
     variant?: "primary" | "secondary";
 }) => {
     const Component = as || "h2";
