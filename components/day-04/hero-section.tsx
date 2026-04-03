@@ -46,7 +46,7 @@ export const HeroSection = () => (
                     </SectionSubTitle>
                 </SectionHeader>
                 <div className="mt-11.25 flex flex-col gap-3.75 md:flex-row">
-                    <Button variant="primary">
+                    <Button>
                         Get Started <ArrowIcon />
                     </Button>
                     <Button variant="outline">

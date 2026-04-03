@@ -1,29 +1,40 @@
 import { cn } from "@/lib/utils";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ComponentProps } from "react";
+import { type VariantProps } from "class-variance-authority";
+import { Button as RootButton, buttonVariants as rootButtonVariants } from "@/components/ui/button";
 
-export const Button = ({
-    className,
-    variant = "secondary",
-    children,
-    ...props
-}: ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: "primary" | "secondary" | "outline";
-    children: ReactNode;
-}) => {
-    return (
-        <button
-            {...props}
-            className={cn(
-                "flex w-fit items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm leading-6 font-medium transition-colors duration-300",
-                variant === "primary" && "bg-primary text-primary-foreground",
-                variant === "secondary" && "bg-secondary hover:bg-secondary/80",
-                variant === "outline" &&
-                    "text-foreground border border-(--border) bg-white shadow-sm hover:bg-white/80",
-                className
-            )}
-            data-variant={variant}
-        >
-            {children}
-        </button>
-    );
+type ButtonVariantsProps = VariantProps<typeof rootButtonVariants>;
+
+const overrides: {
+    variant?: Partial<Record<string, string>>;
+    size?: Partial<Record<string, string>>;
+} = {
+    variant: {
+        outline: "bg-neutral-50 text-foreground shadow-sm hover:bg-white/80",
+    },
+    size: {
+        default: "px-4",
+    },
 };
+
+const buttonVariants = (props?: ButtonVariantsProps) =>
+    cn(
+        rootButtonVariants(props),
+        overrides.variant?.[props?.variant ?? "default"],
+        overrides.size?.[props?.size ?? "default"]
+    );
+
+const Button = ({ variant, size, className, ...props }: ComponentProps<typeof RootButton>) => (
+    <RootButton
+        variant={variant}
+        size={size}
+        className={cn(
+            overrides.variant?.[variant ?? "default"],
+            overrides.size?.[size ?? "default"],
+            className
+        )}
+        {...props}
+    />
+);
+
+export { Button, buttonVariants };
