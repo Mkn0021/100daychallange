@@ -5,6 +5,7 @@ import { LogoCloud } from "./bento-cards/logo-cloud";
 import React from "react";
 import { IssueTemplate } from "./bento-cards/issue-template";
 import { Graveyard } from "./bento-cards/graveyard";
+import { TaskDiscussion } from "./bento-cards/task-discussion";
 
 const bentoCards = [
     {
@@ -39,7 +40,7 @@ const bentoCards = [
         className: "lg:col-span-2",
         title: "Automated workflows.",
         description: "Let intelligent automation handle repetitive tasks.",
-        content: "Feature 4",
+        content: <TaskDiscussion />,
         borders: [
             { variant: "horizontal" as const, position: "hidden lg:block inset-y-0 left-0" },
             { variant: "horizontal" as const, position: "hidden lg:block inset-y-0 right-0" },
@@ -95,7 +96,7 @@ export const BentoGrid = () => (
 );
 
 const BentoCard = ({ className, children }: { className?: string; children: React.ReactNode }) => (
-    <div className={cn("relative flex w-full flex-col px-5 pt-6.25", className)}>{children}</div>
+    <div className={cn("relative flex w-full flex-col pt-6.25 md:px-5", className)}>{children}</div>
 );
 
 const CardTitle = ({ children }: { children: React.ReactNode }) => (
