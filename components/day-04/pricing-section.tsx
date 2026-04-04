@@ -1,25 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { CheckIcon, DashedCircleIcon, SwitchIcon } from "./ui/icons";
+import { CheckIcon, DashedCircleIcon } from "./ui/icons";
 import { Section, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
 import { Button } from "./ui/button";
+import { Switch } from "@/components/ui/switch";
 
 const plans = [
     {
         name: "Free",
-        price: "$0",
-        variant: "outline" as const,
-        description: "Free for everyone",
+        monthlyPrice: "$0",
+        annualPrice: "$0",
         features: ["Unlimited members", "2 teams", "500 issues", "Slack and Github integrations"],
     },
     {
         name: "Startup",
-        price: "$8 per user/month",
-        variant: "default" as const,
-        description: (
-            <p className="text-foreground flex text-[13px] font-medium">
-                <SwitchIcon /> Billed annually
-            </p>
-        ),
+        monthlyPrice: "$8 per user/month",
+        annualPrice: "$96 per user/year",
         features: [
             "All free plan features and…",
             "Mainline AI",
@@ -31,13 +29,8 @@ const plans = [
     },
     {
         name: "Enterprise",
-        price: "$8 per user/month",
-        variant: "outline" as const,
-        description: (
-            <p className="text-foreground flex text-[13px] font-medium">
-                <SwitchIcon /> Billed annually
-            </p>
-        ),
+        monthlyPrice: "$8 per user/month",
+        annualPrice: "$96 per user/year",
         features: [
             "All free plan features and…",
             "Mainline AI",
@@ -47,43 +40,84 @@ const plans = [
         ],
     },
 ];
-export const PricingSection = () => (
-    <Section>
-        <SectionHeader>
-            <SectionTitle>Pricing</SectionTitle>
-            <SectionSubTitle variant="secondary" className="max-w-xl text-center">
-                Use Mainline for free with your whole team. Upgrade to enable unlimited issues,
-                enhanced security controls, and additional features.
-            </SectionSubTitle>
-        </SectionHeader>
-        <div className="mx-auto mt-12.5 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {plans.map((plan) => (
-                <Card
-                    key={plan.name}
-                    className={plan.variant === "default" ? "border-foreground border-4" : ""}
-                >
-                    <CardHeader title={plan.name} price={plan.price} />
-                    {plan.description}
-                    <div className="flex flex-col gap-4">
-                        {plan.features.map((feature, index) => (
-                            <p className="flex gap-2 text-sm leading-tight" key={index}>
-                                <CheckIcon /> {feature}
-                            </p>
-                        ))}
-                    </div>
-                    <Button variant={plan.variant}>
-                        Get started <DashedCircleIcon />
-                    </Button>
-                </Card>
-            ))}
-        </div>
-    </Section>
-);
+export const PricingSection = () => {
+    const [selectedPlan, setSelectedPlan] = useState("Startup");
+    const [billingMode, setBillingMode] = useState({
+        Free: false,
+        Startup: true,
+        Enterprise: true,
+    });
 
-const Card = ({ className, children }: { className?: string; children: React.ReactNode }) => (
+    return (
+        <Section>
+            <SectionHeader>
+                <SectionTitle>Pricing</SectionTitle>
+                <SectionSubTitle variant="secondary" className="max-w-xl text-center">
+                    Use Mainline for free with your whole team. Upgrade to enable unlimited issues,
+                    enhanced security controls, and additional features.
+                </SectionSubTitle>
+            </SectionHeader>
+
+            <div className="mx-auto mt-12.5 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {plans.map((plan) => {
+                    const isAnnual = billingMode[plan.name as keyof typeof billingMode];
+                    const displayPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice;
+
+                    return (
+                        <Card
+                            key={plan.name}
+                            onClick={() => setSelectedPlan(plan.name)}
+                            className={
+                                selectedPlan === plan.name ? "border-foreground border-4" : ""
+                            }
+                        >
+                            <CardHeader title={plan.name} price={displayPrice} />
+                            {plan.name !== "Free" && (
+                                <p className="text-foreground flex items-center gap-2 text-[13px] font-medium">
+                                    <Switch
+                                        checked={isAnnual}
+                                        onCheckedChange={() =>
+                                            setBillingMode((prev) => ({
+                                                ...prev,
+                                                [plan.name]: !prev[plan.name as keyof typeof prev],
+                                            }))
+                                        }
+                                        className="data-[state=checked]:ring-foreground ring-1 data-[state=unchecked]:ring-gray-200"
+                                    />
+                                    Billed {isAnnual ? "annually" : "monthly"}
+                                </p>
+                            )}
+                            <div className="flex flex-col gap-4">
+                                {plan.features.map((feature, index) => (
+                                    <p className="flex gap-2 text-sm leading-tight" key={index}>
+                                        <CheckIcon /> {feature}
+                                    </p>
+                                ))}
+                            </div>
+                            <Button variant={selectedPlan === plan.name ? "default" : "outline"}>
+                                Get started <DashedCircleIcon />
+                            </Button>
+                        </Card>
+                    );
+                })}
+            </div>
+        </Section>
+    );
+};
+
+const Card = ({
+    className,
+    children,
+    onClick,
+}: {
+    className?: string;
+    children: React.ReactNode;
+    onClick?: () => void;
+}) => (
     <div
+        onClick={onClick}
         className={cn(
-            "border-border flex h-fit flex-col gap-8 rounded-xl border-2 px-6 py-5 md:h-full lg:h-fit",
+            "border-border transition-border flex h-fit cursor-pointer flex-col gap-8 rounded-xl border-2 px-6 py-5 md:h-full lg:h-fit",
             className
         )}
     >
