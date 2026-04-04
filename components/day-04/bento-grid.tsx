@@ -3,6 +3,7 @@ import { DashedBorder } from "./hero-section";
 import { Section, SectionSubTitle, SectionTitle } from "./ui/section";
 import { LogoCloud } from "./bento-cards/logo-cloud";
 import React from "react";
+import { IssueTemplate } from "./bento-cards/issue-template";
 
 const bentoCards = [
     {
@@ -10,7 +11,7 @@ const bentoCards = [
         className: "lg:col-span-3",
         title: "Reusable issue templates.",
         description: "Draft lightning-fast documents with our Smart Instructions and Templates.",
-        content: "Feature 1",
+        content: <IssueTemplate />,
         borders: [],
     },
     {
