@@ -28,7 +28,7 @@ const notifications = [
 ];
 
 export const Notifications = () => (
-    <div className="mx-6.25 mt-12.5 max-h-72 overflow-hidden rounded-t-lg border bg-white shadow lg:mx-0 lg:mask-b-from-90%">
+    <div className="mx-6.25 mt-12.5 max-h-72 overflow-hidden rounded-t-lg border border-b-4 border-b-transparent bg-white shadow lg:mx-0">
         <div className="flex items-center justify-between gap-4 border-b p-4">
             <h4 className="text-foreground flex items-center gap-2 text-lg font-semibold">
                 Inbox <Ellipsis />

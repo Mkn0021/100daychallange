@@ -17,7 +17,7 @@ const items = [
 ];
 
 export const Graveyard = () => (
-    <div className="border-muted-foreground/20 mx-6.25 mt-12.5 max-h-72 overflow-hidden rounded-t-lg border bg-yellow-50/50 px-2 py-4 shadow lg:mask-b-from-90%">
+    <div className="border-muted-foreground/20 mx-6.25 mt-12.5 max-h-72 overflow-hidden rounded-t-lg border border-b-4 border-b-transparent bg-neutral-50 px-2 py-4 shadow">
         <div className="flex items-center justify-between px-2">
             <h4 className="text-foreground flex items-center gap-2 text-lg">
                 <DashedCircleIcon /> Graveyard
