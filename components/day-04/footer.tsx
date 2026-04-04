@@ -36,30 +36,30 @@ const footerLinks = [
 
 export const Footer = () => (
     <footer className="relative">
-        <Section as="div" className="mt-22.5">
-            <SectionHeader className="gap-4 text-center">
+        <Section as="div">
+            <SectionHeader className="text-center">
                 <SectionTitle>Start your free trial today</SectionTitle>
-                <SectionSubTitle variant="secondary" className="text-[21px] leading-[115%]">
+                <SectionSubTitle variant="secondary" className="text-xl leading-tight">
                     Mainline is the fit-for-purpose tool for planning and building modern software
                     products.
                 </SectionSubTitle>
-                <Button>
+                <Button className="mt-8">
                     Get Started <DashedCircleIcon />
                 </Button>
             </SectionHeader>
-            <div className="mx-auto mt-18 flex max-w-2xl items-center justify-center gap-5.75 px-13.75">
+            <div className="mx-auto my-12.5 flex max-w-2xl flex-wrap justify-center gap-x-5 gap-y-6">
                 {footerLinks.map((link) => (
                     <Link
                         key={link.title}
                         href={link.href}
-                        className="text-foreground text-[15px] font-medium hover:underline hover:underline-offset-4"
+                        className="text-foreground text-base font-medium hover:underline hover:underline-offset-4"
                     >
                         {link.title}
                     </Link>
                 ))}
             </div>
         </Section>
-        <div className="mt-10 w-full px-2.5 md:mt-14 md:px-3.75 lg:mt-20">
+        <div className="mt-6.25 w-full px-2.5 md:px-3.75">
             <FooterLogoIcon />
         </div>
     </footer>

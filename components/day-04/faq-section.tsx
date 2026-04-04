@@ -50,17 +50,17 @@ const categories = [
 
 export const FaqSection = () => (
     <Background className="rounded-none rounded-b-[36px] bg-linear-to-t">
-        <Section className="grid grid-cols-2 py-28.25 md:px-7.5">
-            <SectionHeader className="items-start gap-5.5">
+        <Section as="div" className="grid grid-cols-1 gap-10 md:px-7.5 lg:grid-cols-2">
+            <SectionHeader className="items-start">
                 <SectionTitle variant="secondary">Got Questions? </SectionTitle>
-                <SectionSubTitle variant="secondary" className="mb-auto justify-start text-[15px]">
+                <SectionSubTitle variant="secondary" className="mb-auto justify-start text-base">
                     If you can’t find what you’re looking for,{" "}
                     <span className="underline underline-offset-4">get in touch.</span>
                 </SectionSubTitle>
             </SectionHeader>
-            <div className="grid gap-6 text-start">
+            <div className="grid gap-6 py-6.25 text-start">
                 {categories.map((category, categoryIndex) => (
-                    <div key={category.title} className="">
+                    <div key={category.title}>
                         <h3 className="text-muted-foreground border-b py-4">{category.title}</h3>
                         <Accordion type="single" collapsible className="w-full">
                             {category.questions.map((item, i) => (
