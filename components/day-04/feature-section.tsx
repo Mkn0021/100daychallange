@@ -40,12 +40,10 @@ export const FeatureSection = () => (
                         {index < features.length - 1 && (
                             <React.Fragment key={`border-${index}`}>
                                 <DashedBorder
-                                    key={`border-h${index}`}
                                     variant="horizontal"
                                     className="absolute inset-y-0 right-0 hidden lg:block"
                                 />
                                 <DashedBorder
-                                    key={`border-v${index}`}
                                     variant="vertical"
                                     className="absolute inset-x-0 bottom-0 block lg:hidden"
                                 />
