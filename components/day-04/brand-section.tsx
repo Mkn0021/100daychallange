@@ -12,6 +12,7 @@ import {
     WatershedLogo,
 } from "./ui/brand-logos";
 import { cn } from "@/lib/utils";
+import Marquee from "react-fast-marquee";
 
 const logoBrands = [
     { id: "mercury", logo: MercuryLogo },
@@ -36,9 +37,9 @@ export const BrandSection = () => (
                 From next-gen startups to established enterprises.
             </span>
         </h2>
-        <div className="grid py-12.5">
-            <BrandRow brands={logoBrands.slice(0, 4)} className="grid-cols-4" />
-            <BrandRow brands={logoBrands.slice(4, 9)} className="grid-cols-5" />
+        <div className="py-12.5 md:grid">
+            <BrandRow brands={logoBrands.slice(0, 4)} direction="left" className="grid-cols-4" />
+            <BrandRow brands={logoBrands.slice(4, 9)} direction="right" className="grid-cols-5" />
         </div>
 
         <DashedBorder variant="vertical" className="absolute inset-x-0 bottom-0" />
@@ -48,12 +49,29 @@ export const BrandSection = () => (
     </Section>
 );
 
-const BrandRow = ({ brands, className }: { brands: typeof logoBrands; className?: string }) => (
-    <ul className={cn("grid justify-items-center", className)}>
-        {brands.map((brand) => (
-            <li key={brand.id}>
-                <brand.logo className="h-10 lg:h-16" />
-            </li>
-        ))}
-    </ul>
+const BrandRow = ({
+    brands,
+    direction,
+    className,
+}: {
+    brands: typeof logoBrands;
+    direction: "left" | "right";
+    className?: string;
+}) => (
+    <>
+        <ul className={cn("hidden justify-items-center md:grid", className)}>
+            {brands.map((brand) => (
+                <li key={brand.id}>
+                    <brand.logo className="h-10 lg:h-16" />
+                </li>
+            ))}
+        </ul>
+        <div className="md:hidden">
+            <Marquee direction={direction} pauseOnHover loop={0}>
+                {brands.map((brand) => (
+                    <brand.logo key={brand.id} className="mx-8 h-10" />
+                ))}
+            </Marquee>
+        </div>
+    </>
 );
