@@ -109,7 +109,7 @@ const HeroImage = ({ className }: { className?: string }) => (
     >
         <Image
             fill
-            src="/day-04/dashboard-01.png"
+            src="/day-04/hero.webp"
             alt="Hero Image"
             className="absolute inset-0 object-cover object-top-left"
         />

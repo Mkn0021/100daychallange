@@ -5,6 +5,8 @@ import { DashedBorder } from "./hero-section";
 import { Section, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
 import { ProductDeployment } from "./feature-cards/product-deployment";
 import { ProjectOverview } from "./feature-cards/project-overview";
+import { CycleMomentum } from "./feature-cards/cycle-monument";
+import { cn } from "@/lib/utils";
 
 const features = [
     {
@@ -20,7 +22,7 @@ const features = [
     {
         title: "Build momentum and healthy habits",
         href: "#",
-        content: "feature 3",
+        content: <CycleMomentum />,
     },
 ];
 
@@ -36,9 +38,14 @@ export const FeatureSection = () => (
                     staying focused, moving quickly, and always aiming for high-quality work.
                 </SectionSubTitle>
             </SectionHeader>
-            <div className="border-border mt-12.5 grid grid-cols-1 overflow-hidden rounded-3xl border lg:grid-cols-3">
+            <div className="border-border mt-12.5 grid grid-cols-1 overflow-hidden rounded-3xl border md:grid-cols-2 lg:grid-cols-3">
                 {features.map((feature, index) => (
-                    <FeatureCard key={index}>
+                    <FeatureCard
+                        key={index}
+                        className={
+                            index === 2 ? "col-span-1 md:col-span-2 lg:col-span-1" : undefined
+                        }
+                    >
                         <CardSkeleton>{feature.content}</CardSkeleton>
                         <CardTitle href={feature.href}>{feature.title}</CardTitle>
 
@@ -46,7 +53,11 @@ export const FeatureSection = () => (
                             <React.Fragment key={`border-${index}`}>
                                 <DashedBorder
                                     variant="horizontal"
-                                    className="absolute inset-y-0 right-0 hidden lg:block"
+                                    className={cn(
+                                        "absolute inset-y-0 right-0 hidden",
+                                        index === 0 && "md:block",
+                                        index === 1 && "lg:block"
+                                    )}
                                 />
                                 <DashedBorder
                                     variant="vertical"
@@ -61,18 +72,29 @@ export const FeatureSection = () => (
     </section>
 );
 
-const FeatureCard = ({ children }: { children: React.ReactNode }) => (
-    <div className="relative flex h-100 w-full flex-col bg-white">{children}</div>
+const FeatureCard = ({
+    className,
+    children,
+}: {
+    className?: string;
+    children: React.ReactNode;
+}) => (
+    <div className={cn("relative flex h-100 w-full flex-col bg-white", className)}>{children}</div>
 );
 
 const CardSkeleton = ({ children }: { children?: React.ReactNode }) => (
-    <div className="border-border mt-12 ml-12 flex-1 rounded-tl-2xl border-t border-l bg-neutral-50 mask-b-from-70%">
+    <div
+        className={cn(
+            "border-border mt-12 ml-12 flex-1 rounded-tl-2xl border-t border-l bg-neutral-50",
+            "min-h-0 overflow-hidden mask-b-from-70% max-lg:mask-r-from-70%"
+        )}
+    >
         {children}
     </div>
 );
 
 const CardTitle = ({ children, href = "#" }: { children: React.ReactNode; href?: string }) => (
-    <div className="flex justify-between p-6">
+    <div className="flex shrink-0 justify-between p-6">
         <h3
             className="text-foreground text-2xl leading-tight font-bold tracking-tight"
             style={{ fontFamily: "var(--font-dm)" }}
