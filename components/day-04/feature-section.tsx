@@ -3,19 +3,24 @@ import Link from "next/link";
 import { ArrowIcon2 } from "./ui/icons";
 import { DashedBorder } from "./hero-section";
 import { Section, SectionHeader, SectionSubTitle, SectionTitle } from "./ui/section";
+import { ProductDeployment } from "./feature-cards/product-deployment";
+import { ProjectOverview } from "./feature-cards/project-overview";
 
 const features = [
     {
         title: "Purpose-built for product development",
         href: "#",
+        content: <ProductDeployment />,
     },
     {
         title: "Manage projects end-to-end",
         href: "#",
+        content: <ProjectOverview />,
     },
     {
         title: "Build momentum and healthy habits",
         href: "#",
+        content: "feature 3",
     },
 ];
 
@@ -34,7 +39,7 @@ export const FeatureSection = () => (
             <div className="border-border mt-12.5 grid grid-cols-1 overflow-hidden rounded-3xl border lg:grid-cols-3">
                 {features.map((feature, index) => (
                     <FeatureCard key={index}>
-                        <CardSkeleton></CardSkeleton>
+                        <CardSkeleton>{feature.content}</CardSkeleton>
                         <CardTitle href={feature.href}>{feature.title}</CardTitle>
 
                         {index < features.length - 1 && (
@@ -61,7 +66,7 @@ const FeatureCard = ({ children }: { children: React.ReactNode }) => (
 );
 
 const CardSkeleton = ({ children }: { children?: React.ReactNode }) => (
-    <div className="border-border mt-12 ml-12 flex-1 rounded-tl-2xl border-t border-l bg-neutral-50 mask-b-from-50%">
+    <div className="border-border mt-12 ml-12 flex-1 rounded-tl-2xl border-t border-l bg-neutral-50 mask-b-from-70%">
         {children}
     </div>
 );
