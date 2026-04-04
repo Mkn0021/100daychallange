@@ -69,7 +69,7 @@ const BrandRow = ({
         <div className="md:hidden">
             <Marquee direction={direction} pauseOnHover loop={0}>
                 {brands.map((brand) => (
-                    <brand.logo key={brand.id} className="mx-8 h-10" />
+                    <brand.logo key={brand.id} className="mx-4 h-10" />
                 ))}
             </Marquee>
         </div>

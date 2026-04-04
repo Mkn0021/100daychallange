@@ -6,6 +6,7 @@ import React from "react";
 import { IssueTemplate } from "./bento-cards/issue-template";
 import { Graveyard } from "./bento-cards/graveyard";
 import { TaskDiscussion } from "./bento-cards/task-discussion";
+import { Notifications } from "./bento-cards/notifications";
 
 const bentoCards = [
     {
@@ -52,7 +53,7 @@ const bentoCards = [
         className: "lg:col-span-2",
         title: "Advanced analytics.",
         description: "Gain deep insights into your team's performance.",
-        content: "Feature 5",
+        content: <Notifications />,
         borders: [{ variant: "vertical" as const, position: "block lg:hidden inset-x-0 top-0" }],
     },
 ];
