@@ -4,6 +4,7 @@ import { Section, SectionSubTitle, SectionTitle } from "./ui/section";
 import { LogoCloud } from "./bento-cards/logo-cloud";
 import React from "react";
 import { IssueTemplate } from "./bento-cards/issue-template";
+import { Graveyard } from "./bento-cards/graveyard";
 
 const bentoCards = [
     {
@@ -30,7 +31,7 @@ const bentoCards = [
         className: "lg:col-span-2",
         title: "Real-time collaboration.",
         description: "Work together seamlessly with communication tools.",
-        content: "Feature 3",
+        content: <Graveyard />,
         borders: [{ variant: "vertical" as const, position: "block lg:hidden inset-x-0 top-0" }],
     },
     {
@@ -94,7 +95,7 @@ export const BentoGrid = () => (
 );
 
 const BentoCard = ({ className, children }: { className?: string; children: React.ReactNode }) => (
-    <div className={cn("relative flex w-full flex-col px-5 py-6.25", className)}>{children}</div>
+    <div className={cn("relative flex w-full flex-col px-5 pt-6.25", className)}>{children}</div>
 );
 
 const CardTitle = ({ children }: { children: React.ReactNode }) => (
